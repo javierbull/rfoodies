@@ -348,6 +348,41 @@ body {
     --bs-btn-disabled-border-color: var(--border-primary);
 }
 
+.btn-icon {
+    font-size: 1rem;
+    line-height: 1.25rem;
+    height: 3rem;
+    width: 3rem;
+    font-weight: 500;
+    padding: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: .5rem;
+    border: 2px solid;
+    border-radius: 999px;
+    -webkit-border-radius: 2rem;
+    -moz-border-radius: 2rem;
+    -ms-border-radius: 2rem;
+    -o-border-radius: 2rem;
+}
+
+.primary-btn-icon {
+    --bs-btn-color: var(--text-on-primary);
+    --bs-btn-bg: var(--bg-fill-secondary-hover);
+    --bs-btn-border-color: var(--border-tertiary);
+    --bs-btn-hover-color: var(--text-on-primary);
+    --bs-btn-hover-bg: var(--bg-fill-brand);
+    --bs-btn-hover-border-color: var(--border-tertiary);
+    --bs-btn-focus-shadow-rgb: var(--btn-focus-shadow);
+    --bs-btn-active-color: var(--text-on-primary);
+    --bs-btn-active-bg: var(--bg-fill-brand);
+    --bs-btn-active-border-color: var(--border-brand);
+    --bs-btn-disabled-color: var(--text-disabled);
+    --bs-btn-disabled-bg: var(--bg-fill-disabled);
+    --bs-btn-disabled-border-color: var(--border-primary);
+}
+
 .primary-link {
     color: var(--text-link);
 }
@@ -357,20 +392,11 @@ body {
 
 }
 
-.secondary-link {
-    color: var(--text-link-secondary) !important;
-}
-
-.secondary-link:hover {
-    color: var(--text-link--secondary-hover) !important;
-}
-
 .disabled-link {
     color: var(--text-disabled) !important;
     pointer-events: none;
     cursor: default;
 }
-
 /* End Buttons */
 
 /* Inputs */

@@ -59,7 +59,14 @@
                 Outline
                 <ion-icon name="arrow-forward"></ion-icon>
             </button>
+            <button type="button" class="btn btn-icon primary-btn-icon">
+                <ion-icon name="arrow-back"></ion-icon>
+            </button>
+            <button type="button" class="btn btn-icon primary-btn-icon" disabled>
+                <ion-icon name="arrow-back"></ion-icon>
+            </button>
         </div>
+        
         <!-- End buttons -->
 
         <!-- Links -->
@@ -72,14 +79,6 @@
 
             <a href="#" class="primary-link disabled-link" disabled>
                 link primary disabled
-            </a>
-
-            <a href="#" class="secondary-link">
-                link secondary
-            </a>
-
-            <a href="#" class="secondary-link disabled-link" disabled>
-                link secondary disabled
             </a>
         </div>
         <!-- End links -->
@@ -98,7 +97,8 @@
                 </div>
                 <div class="col-md-4">
                     <label for="validationCustom02" class="form-label">Last name</label>
-                    <input type="text" class="form-control" id="validationCustom02" value="Otto" required disabled readonly>
+                    <input type="text" class="form-control" id="validationCustom02" value="Otto" required disabled
+                        readonly>
                     <div class="valid-feedback">
                         Looks good!
                     </div>
