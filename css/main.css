@@ -111,7 +111,42 @@
     --bg-fill-white: var(--default-white);
     --bg-fill-black: var(--default-black);
     --bg-fill-black-secondary: var(--gray-800);
+    --border-accent: var(--golden-700);
+    /* End Backgrounds colors */
 
+    /* Border colors */
+    --border-brand: var(--red-600);
+    --border-primary: var(--gray-300);
+    --border-secondary: var(--gray-800);
+    --border-tertiary: var(--cream-050);
+    --border-on-dark: var(--gray-600);
+    --border-focus: var(--gray-950);
+    --border-error: var(--red-700);
+    --border-success: var(--green-700);
+    --border-warning: var(--orange-700);
+    --border-info: var(--blue-700);
+    /* End Border colors */
+
+    /* Text colors */
+    --text-brand: var(--red-600);
+    --text-brand-dark: var(--red-300);
+    --text-primary: var(--gray-950);
+    --text-on-primary: var(--cream-050);
+    --text-secondary: var(--gray-700);
+    --text-on-secondary-hover: var(--cream-050);
+    --text-placeholder: var(--gray-500);
+    --text-disabled: var(--gray-500);
+    --text-link: var(--gray-950);
+    --text-link-hover: var(--red-600);
+    --text-error: var(--red-700);
+    --text-success: var(--green-700);
+    --text-warning: var(--orange-700);  
+    --text-info: var(--blue-700);
+    /* End Text colors */
+
+    /* Shadows */
+    --shadow-primary: 0px 4px 4px rgba(0, 0, 0, 0.15);;
+    /* End shadows */
 }
 
 html {
