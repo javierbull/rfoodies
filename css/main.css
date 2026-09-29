@@ -140,12 +140,13 @@
     --text-link-hover: var(--red-600);
     --text-error: var(--red-700);
     --text-success: var(--green-700);
-    --text-warning: var(--orange-700);  
+    --text-warning: var(--orange-700);
     --text-info: var(--blue-700);
     /* End Text colors */
 
     /* Shadows */
-    --shadow-primary: 0px 4px 4px rgba(0, 0, 0, 0.15);;
+    --shadow-primary: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    ;
     /* End shadows */
 }
 
@@ -290,6 +291,7 @@ body {
     font-weight: 400;
     line-height: 1rem;
 }
+
 /* End Typography */
 
 /* Buttons */
@@ -397,11 +399,11 @@ body {
     pointer-events: none;
     cursor: default;
 }
+
 /* End Buttons */
 
 /* Inputs */
 .row-form-control {
-    /* background-color: pink; */
     width: 100%;
     display: flex;
     gap: 1.25rem;
@@ -427,7 +429,7 @@ body {
     font-size: 1rem;
     line-height: 1.25rem;
     color: var(--text-primary);
-    background-color: var(--bg-fill-input-primary);
+    background-color: var(--bg-fill-input);
     border: 1px solid var(--border-primary);
     border-radius: .5rem;
 }
@@ -435,7 +437,7 @@ body {
 .form-control:focus,
 .form-select:focus {
     color: var(--text-primary);
-    background-color: var(--bg-fill-input-primary);
+    background-color: var(--bg-fill-input);
     border-color: var(--border-focus);
     outline: 0;
     box-shadow: 0 0 0 .25rem rgba(var(--btn-focus-shadow), .25);
@@ -482,5 +484,29 @@ body {
     margin-top: .25rem;
 }
 
-/* End inputs */
+/* Toggle-password */
+.password-input-wrapper {
+    position: relative;
+}
 
+.password-input-wrapper .form-control {
+    padding-right: 2.5rem;
+}
+
+.toggle-password-icon {
+    position: absolute;
+    top: 50%;
+    right: 0.75rem;
+    transform: translateY(-50%);
+    font-size: 1.25rem;
+    color: var(--text-secondary);
+    cursor: pointer;
+}
+
+.toggle-password-icon:hover {
+    color: var(--text-primary);
+}
+
+/* End toggle password */
+
+/* End inputs */
