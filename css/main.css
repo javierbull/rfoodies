@@ -510,3 +510,51 @@ body {
 /* End toggle password */
 
 /* End inputs */
+
+/*Tabs */
+.custom-tabs {
+    border-bottom: 0;
+    /* quita la línea gris de Bootstrap */
+    flex-wrap: nowrap;
+    /* una sola fila */
+    overflow-x: auto;
+    /* scroll horizontal en móvil */
+    overflow-y: hidden;
+    scrollbar-width: none;
+}
+
+.custom-tabs::-webkit-scrollbar {
+    display: none;
+}
+
+.custom-tabs .nav-link {
+    background: transparent;
+    border: 0;
+    border-bottom: 4px solid transparent;
+    /* espacio reservado para la barra */
+    border-radius: 0;
+    color: var(--text-secondary);
+    font-size: 1rem;
+    font-weight: 600;
+    padding: .5rem 1rem;
+    white-space: nowrap;
+    transition: color .2s ease, border-color .2s ease;
+}
+
+.custom-tabs .nav-link:hover,
+.custom-tabs .nav-link:focus-visible {
+    color: var(--text-brand);
+    border-color: transparent;
+    border-bottom-color: transparent;
+}
+
+.custom-tabs .nav-link.active {
+    background: transparent;
+    color: var(--text-brand);
+    font-weight: 600;
+    border-color: transparent;
+    border-bottom-color: var(--border-brand);
+    /* la barra roja */
+}
+
+/* End Tabs */

@@ -66,7 +66,7 @@
                 <ion-icon name="arrow-back"></ion-icon>
             </button>
         </div>
-        
+
         <!-- End buttons -->
 
         <!-- Links -->
@@ -88,44 +88,96 @@
             <h2 class="headline_2 mb-2">Inputs</h2>
 
             <form class="form-login">
-                    <div class="form-row">
-                        <div class="form-group col">
-                            <label for="user-doc-type" class="form-label">State</label>
-                            <select class="form-select" id="user-doc-type" required="">
-                                <option>DNI</option>
-                                <option>CE</option>
-                                <option>Pasaporte</option>
-                            </select>
-                        </div>
-                        <div class="form-group col">
-                            <label for="user-doc-number" class="form-label">Número</label>
-                            <input type="text" class="form-control" id="user-doc-number" aria-describedby="emailHelp">
-                            <div class="invalid-feedback">
-                                Ingreser un número de documento válido.
-                            </div>
-                        </div>
+                <div class="form-row">
+                    <div class="form-group col">
+                        <label for="user-doc-type" class="form-label">State</label>
+                        <select class="form-select" id="user-doc-type" required="">
+                            <option>DNI</option>
+                            <option>CE</option>
+                            <option>Pasaporte</option>
+                        </select>
                     </div>
-
-                    <div class="form-group">
-                        <label for="user-password" class="form-label">Contraseña</label>
-                        <div class="password-input-wrapper">
-                            <input type="password" class="form-control" id="user-password">
-                            <ion-icon name="eye-outline" id="toggle-password" class="toggle-password-icon"></ion-icon>
-                        </div>
+                    <div class="form-group col">
+                        <label for="user-doc-number" class="form-label">Número</label>
+                        <input type="text" class="form-control" id="user-doc-number" aria-describedby="emailHelp">
                         <div class="invalid-feedback">
-                            Ingrese una contraseña válida.
+                            Ingreser un número de documento válido.
                         </div>
                     </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="user-password" class="form-label">Contraseña</label>
+                    <div class="password-input-wrapper">
+                        <input type="password" class="form-control" id="user-password">
+                        <ion-icon name="eye-outline" id="toggle-password" class="toggle-password-icon"></ion-icon>
+                    </div>
+                    <div class="invalid-feedback">
+                        Ingrese una contraseña válida.
+                    </div>
+                </div>
 
 
-                    <button type="submit" class="btn primary-btn">Iniciar sesión</button>
+                <button type="submit" class="btn primary-btn">Iniciar sesión</button>
 
-                    <a href="#" class="primary-link" data-bs-toggle="modal" data-bs-target="#modalRecoverPassword">
-                        ¿Olvidaste tu contraseña?
-                    </a>
-                </form>
+                <a href="#" class="primary-link" data-bs-toggle="modal" data-bs-target="#modalRecoverPassword">
+                    ¿Olvidaste tu contraseña?
+                </a>
+            </form>
         </div>
         <!-- End inputs-->
+
+        <!-- Tabs -->
+        <div class="mb-5">
+            <h2 class="headline_2 mb-2">Tabs</h2>
+
+            <div class="container py-4">
+                <ul class="nav nav-tabs custom-tabs" id="mainTabs" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link active" data-bs-toggle="tab" data-bs-target="#inicio" type="button"
+                            role="tab">Inicio</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" data-bs-toggle="tab" data-bs-target="#recetas" type="button"
+                            role="tab">Recetas</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" data-bs-toggle="tab" data-bs-target="#masterclasses" type="button"
+                            role="tab">MasterClasses</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" data-bs-toggle="tab" data-bs-target="#beneficios" type="button"
+                            role="tab">Beneficios</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" data-bs-toggle="tab" data-bs-target="#los5" type="button"
+                            role="tab">Los 5 de las semana</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" data-bs-toggle="tab" data-bs-target="#sorteos" type="button"
+                            role="tab">Sorteos</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" data-bs-toggle="tab" data-bs-target="#planes" type="button"
+                            role="tab">Planes</button>
+                    </li>
+                </ul>
+
+                <div class="tab-content pt-4">
+                    <div class="tab-pane fade show active" id="inicio" role="tabpanel">Contenido Inicio</div>
+                    <div class="tab-pane fade" id="recetas" role="tabpanel">Contenido Recetas</div>
+                    <div class="tab-pane fade" id="masterclasses" role="tabpanel">Contenido MasterClasses</div>
+                    <div class="tab-pane fade" id="beneficios" role="tabpanel">Contenido Beneficios</div>
+                    <div class="tab-pane fade" id="los5" role="tabpanel">Contenido Los 5 de la semana</div>
+                    <div class="tab-pane fade" id="sorteos" role="tabpanel">Contenido Sorteos</div>
+                    <div class="tab-pane fade" id="planes" role="tabpanel">Contenido Planes</div>
+                </div>
+            </div>
+
+        </div>
+        <!-- End Tabs -->
+
+
     </div>
 
     <!-- Js-files -->
