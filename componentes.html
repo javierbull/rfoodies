@@ -138,6 +138,35 @@
         </div>
         <!-- End Avatars -->
 
+        <!-- Dropdown btn -->
+        <div class="mb-5">
+            <h2 class="headline_2 mb-2">Dropdown btn</h2>
+
+            <div class="dropdown">
+                <button class="btn avatar-btn dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                    aria-expanded="false" aria-label="Abrir menú de usuario">R</button>
+
+                <ul class="dropdown-menu dropdown-menu-end avatar-menu">
+                    <li class="user-info">
+                        <div class="fw-semibold">Rosa</div>
+                        <small>rosa@correo.com</small>
+                    </li>
+                    <li>
+                        <hr class="dropdown-divider">
+                    </li>
+                    <li><a class="dropdown-item" href="#perfil">Mi perfil</a></li>
+                    <li><a class="dropdown-item" href="#guardadas">Recetas guardadas</a></li>
+                    <li><a class="dropdown-item" href="#planes">Mis planes</a></li>
+                    <li>
+                        <hr class="dropdown-divider">
+                    </li>
+                    <li><a class="dropdown-item" href="#salir">Cerrar sesión</a></li>
+                </ul>
+            </div>
+
+        </div>
+        <!-- End Dropdown btn -->
+
         <!-- Tabs -->
         <div class="mb-5">
             <h2 class="headline_2 mb-2">Tabs</h2>
@@ -216,9 +245,33 @@
                     <a class="navbar-logo-link" href="#">
                         <img src="images/logos/logo.svg" alt="RFoodies Logo" class="logo-navbar">
                     </a>
+
+                    <div class="navbar-actions">
+                        <button type="button" class="btn primary-btn">
+                            <ion-icon name="arrow-back"></ion-icon>
+                            Primary
+                            <ion-icon name="arrow-forward"></ion-icon>
+                        </button>
+                        <button type="button" class="btn outline-btn">
+                            <ion-icon name="arrow-back"></ion-icon>
+                            Outline
+                            <ion-icon name="arrow-forward"></ion-icon>
+                        </button>
+                        <div class="avatar">
+                            <span>J</span>
+                        </div>
+                    </div>
                 </div>
-                <button class="nav-link" data-bs-toggle="tab" data-bs-target="#planes" type="button"
-                    role="tab">Planes</button>
+                <ul class="nav menu-tabs">
+                    <li class="nav-item"><a class="nav-link active" aria-current="page" href="#index">Inicio</a>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="#recetas">Recetas</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#masterclasses">MasterClasses</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#beneficios">Beneficios</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#los-5-de-la-semana">Los 5 de la semana</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#sorteos">Sorteos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#planes">Planes</a></li>
+                </ul>
             </nav>
 
         </div>
