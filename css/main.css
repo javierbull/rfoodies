@@ -294,6 +294,7 @@ body {
 
 /* End Typography */
 
+/* COMPONENTS */
 /* Buttons */
 .btn {
     font-size: 1rem;
@@ -558,3 +559,108 @@ body {
 }
 
 /* End Tabs */
+
+/* Main menu */
+:root {
+    --menu-accent: #42ca4b;
+    --menu-indicator: 5px;
+}
+
+/* ---- Menú ---- */
+.menu-tabs {
+    flex-wrap: nowrap;
+    /* una sola línea */
+    overflow-x: auto;
+    /* scroll horizontal en móvil */
+    white-space: nowrap;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+}
+
+.menu-tabs::-webkit-scrollbar {
+    display: none;
+}
+
+.menu-tabs .nav-link {
+    position: relative;
+    padding: .5rem 1rem;
+    /* sin padding lateral: la barra mide lo mismo que el texto */
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--text-secondary);
+    border-radius: 0;
+    transition: color .2s ease;
+}
+
+/* Indicador inferior */
+.menu-tabs .nav-link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 4px;
+    background: var(--bg-fill-brand);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform .25s ease;
+}
+
+.menu-tabs .nav-link:hover,
+.menu-tabs .nav-link:focus-visible {
+    color: var(--text-brand);
+}
+
+.menu-tabs .nav-link:focus-visible {
+    outline: 2px solid var(--border-focus);
+    outline-offset: -2px;
+}
+
+.menu-tabs .nav-link.active {
+    color: var(--text-brand);
+    font-weight: 600;
+    background: transparent;
+}
+
+.menu-tabs .nav-link.active::after {
+    transform: scaleX(1);
+}
+
+/* End Main menu */
+
+/* Avatars */
+.avatar {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    background-color: var(--bg-fill-accent);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-primary);
+    font-weight: bold;
+    font-size: 1.5rem;
+    border: 2px solid var(--border-secondary);
+}
+
+/* End Avatars */
+
+/* Navbar */
+.navbar-desktop {
+    background-color: var(--bg-surface-primary);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 2.5rem;
+    height: 4rem;
+
+}
+
+.logo-navbar {
+    height: 1.5rem;
+}
+
+/* End Navbar */
+
+
+/* END COMPONENTS */
