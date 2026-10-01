@@ -783,7 +783,20 @@ body {
 
 .user-menu__plan-label {
     font-size: 1rem;
-    font-weight: 500;
+    font-weight: 600;
+    margin-bottom: 0;
+    text-transform: uppercase;
+}
+
+.user-menu__plan_active {
+    gap: 0.25rem;
+    padding: 0 12px;
+}
+
+.user-menu__plan-validity {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    margin-bottom: 0;
 }
 
 /* ---------- 3. Footer: padding 12 ---------- */
