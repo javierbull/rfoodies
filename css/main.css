@@ -683,7 +683,105 @@ body {
 }
 
 /* ---- Panel del menú ---- */
-
+/* ---------- Tokens (ajusta a los de tu Figma) ---------- */
+    :root {
+      --um-font: "Poppins", system-ui, sans-serif;
+      --um-width: 280px;
+      --um-radius: 16px;
+      --um-border: #e5e7eb;
+      --um-text: #1f2328;
+      --um-muted: #8a9099;
+      --um-hover: #f3f4f6;
+      --um-brand: #c8283d;
+      --um-brand-hover: #a81f32;
+    }
+ 
+    /* ---------- Contenedor: Vertical · Fixed · Hug · padding 0 · gap 0 ---------- */
+    .user-menu {
+      width: var(--um-width);
+      padding: 0;                       /* Figma: 0 */
+      font-family: var(--um-font);
+      color: var(--um-text);
+      border: 1px solid var(--um-border);
+      border-radius: var(--um-radius);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, .10);
+      overflow: hidden;
+      --bs-dropdown-padding-y: 0;
+    }
+ 
+    /* ---------- 1. Header: padding 12 / 24 ---------- */
+    .user-menu__header {
+      padding: 12px 24px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .user-menu__name  { margin: 0; font-size: 1rem; font-weight: 500; line-height: 1.3; }
+    .user-menu__email { margin: 0; font-size: .75rem; color: var(--um-muted); overflow: hidden; text-overflow: ellipsis; }
+ 
+    /* ---------- 2. Cuerpo: vertical · gap 24 · padding 12 ---------- */
+    .user-menu__body {
+      padding: 12px;
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+      border-top: 1px solid var(--um-border);
+    }
+    .user-menu__list { list-style: none; margin: 0; padding: 0; }
+ 
+    /* Item: horizontal · gap 8 · padding 8 / 12 */
+    .user-menu__item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 12px;
+      border-radius: 8px;
+      font-size: .875rem;
+      font-weight: 500;
+      color: var(--um-text);
+    }
+    .user-menu__item .bi-chevron-right { margin-left: auto; font-size: .75rem; }
+    .user-menu__item:hover,
+    .user-menu__item:focus-visible { background: var(--um-hover); color: var(--um-text); }
+    .user-menu__item:active { background: var(--um-hover); }
+ 
+    /* Plan inactivo + CTA */
+    .user-menu__plan {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+      padding: 0 12px;
+    }
+    .user-menu__plan-label { font-size: 1rem; font-weight: 500; }
+    .btn-subscribe {
+      --bs-btn-bg: var(--um-brand);
+      --bs-btn-border-color: var(--um-brand);
+      --bs-btn-color: #fff;
+      --bs-btn-hover-bg: var(--um-brand-hover);
+      --bs-btn-hover-border-color: var(--um-brand-hover);
+      --bs-btn-hover-color: #fff;
+      --bs-btn-active-bg: var(--um-brand-hover);
+      --bs-btn-active-border-color: var(--um-brand-hover);
+      --bs-btn-active-color: #fff;
+      --bs-btn-padding-x: 16px;
+      --bs-btn-padding-y: 6px;
+      --bs-btn-font-size: .8125rem;
+      --bs-btn-font-weight: 500;
+      --bs-btn-border-radius: 999px;
+      font-family: var(--um-font);
+    }
+ 
+    /* ---------- 3. Footer: padding 12 ---------- */
+    .user-menu__footer {
+      padding: 12px;
+      border-top: 1px solid var(--um-border);
+    }
+ 
+    /* Mobile: que no se salga de la pantalla */
+    @media (max-width: 360px) {
+      .user-menu { width: calc(100vw - 24px); }
+    }
 
 /* End Btn dropdown */
 
