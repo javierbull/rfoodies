@@ -95,7 +95,7 @@
     --bg-surface-secondary: var(--cream-100);
     --bg-fill-brand: var(--red-600);
     --bg-fill-brand-hover: var(--red-800);
-    --bg-fill-secondary: var(--cream-050);
+    --bg-fill-secondary: var(--cream-100);
     --bg-fill-secondary-hover: var(--gray-900);
     --bg-fill-accent: var(--golden-300);
     --bg-fill-input: var(--default-white);
@@ -135,7 +135,7 @@
     --text-secondary: var(--gray-700);
     --text-on-secondary-hover: var(--cream-050);
     --text-placeholder: var(--gray-500);
-    --text-disabled: var(--gray-500);
+    --text-muted: var(--gray-500);
     --text-link: var(--gray-950);
     --text-link-hover: var(--red-600);
     --text-error: var(--red-700);
@@ -330,7 +330,7 @@ body {
     --bs-btn-active-color: var(--text-on-primary);
     --bs-btn-active-bg: var(--bg-fill-brand);
     --bs-btn-active-border-color: var(--border-brand);
-    --bs-btn-disabled-color: var(--text-disabled);
+    --bs-btn-disabled-color: var(--text-muted);
     --bs-btn-disabled-bg: var(--bg-fill-disabled);
     --bs-btn-disabled-border-color: var(--border-primary);
 }
@@ -346,7 +346,7 @@ body {
     --bs-btn-active-color: var(--text-primary);
     --bs-btn-active-bg: var(--bg-fill-secondary);
     --bs-btn-active-border-color: var(--border-secondary);
-    --bs-btn-disabled-color: var(--text-disabled);
+    --bs-btn-disabled-color: var(--text-muted);
     --bs-btn-disabled-bg: var(--bg-fill-secondary);
     --bs-btn-disabled-border-color: var(--border-primary);
 }
@@ -381,7 +381,7 @@ body {
     --bs-btn-active-color: var(--text-on-primary);
     --bs-btn-active-bg: var(--bg-fill-brand);
     --bs-btn-active-border-color: var(--border-brand);
-    --bs-btn-disabled-color: var(--text-disabled);
+    --bs-btn-disabled-color: var(--text-muted);
     --bs-btn-disabled-bg: var(--bg-fill-disabled);
     --bs-btn-disabled-border-color: var(--border-primary);
 }
@@ -396,7 +396,7 @@ body {
 }
 
 .disabled-link {
-    color: var(--text-disabled) !important;
+    color: var(--text-muted) !important;
     pointer-events: none;
     cursor: default;
 }
@@ -684,104 +684,138 @@ body {
 
 /* ---- Panel del menú ---- */
 /* ---------- Tokens (ajusta a los de tu Figma) ---------- */
-    :root {
-      --um-font: "Poppins", system-ui, sans-serif;
-      --um-width: 280px;
-      --um-radius: 16px;
-      --um-border: #e5e7eb;
-      --um-text: #1f2328;
-      --um-muted: #8a9099;
-      --um-hover: #f3f4f6;
-      --um-brand: #c8283d;
-      --um-brand-hover: #a81f32;
-    }
- 
-    /* ---------- Contenedor: Vertical · Fixed · Hug · padding 0 · gap 0 ---------- */
+:root {
+    --um-border: #e5e7eb;
+    --um-text: #1f2328;
+    --um-muted: #8a9099;
+    --um-hover: #f3f4f6;
+    --um-brand: #c8283d;
+    --um-brand-hover: #a81f32;
+}
+
+/* ---------- Contenedor: Vertical · Fixed · Hug · padding 0 · gap 0 ---------- */
+.user-menu {
+    min-width: 300px;
+    margin-top: 0.5rem;
+    padding: 0;
+    border: 1px solid var(--border-primary);
+    border-radius: 1.5rem;
+    box-shadow: var(--shadow-primary);
+    overflow: hidden;
+    --bs-dropdown-padding-y: 0;
+}
+
+/* ---------- 1. Header: padding 12 / 24 ---------- */
+.user-menu__header {
+    padding: 12px 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.user-menu__name {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.3;
+}
+
+.user-menu__email {
+    margin: 0;
+    font-size: .75rem;
+    color: var(--text-muted);
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* ---------- 2. Cuerpo: vertical · gap 24 · padding 12 ---------- */
+.user-menu__body {
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    border-top: 1px solid var(--border-primary);
+}
+
+.user-menu__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* Item: horizontal · gap 8 · padding 8 / 12 */
+.user-menu__item {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    padding: .5rem .75rem;
+    border-radius: .5rem;
+    font-size: .875rem;
+    font-weight: 500;
+}
+
+.user-menu__item ion-icon {
+    font-size: 1rem;
+}
+
+.user-menu__item ion-icon:last-child {
+    margin-left: auto;
+}
+
+.user-menu__item:hover,
+.user-menu__item:focus-visible {
+    background: var(--bg-fill-secondary);
+    color: var(--um-text);
+}
+
+.user-menu__item:active {
+    background: var(--um-hover);
+}
+
+/* Plan inactivo + CTA */
+.user-menu__plan {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    padding: 0 12px;
+}
+
+.user-menu__plan-label {
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.btn-subscribe {
+    --bs-btn-bg: var(--um-brand);
+    --bs-btn-border-color: var(--um-brand);
+    --bs-btn-color: #fff;
+    --bs-btn-hover-bg: var(--um-brand-hover);
+    --bs-btn-hover-border-color: var(--um-brand-hover);
+    --bs-btn-hover-color: #fff;
+    --bs-btn-active-bg: var(--um-brand-hover);
+    --bs-btn-active-border-color: var(--um-brand-hover);
+    --bs-btn-active-color: #fff;
+    --bs-btn-padding-x: 16px;
+    --bs-btn-padding-y: 6px;
+    --bs-btn-font-size: .8125rem;
+    --bs-btn-font-weight: 500;
+    --bs-btn-border-radius: 999px;
+    font-family: var(--um-font);
+}
+
+/* ---------- 3. Footer: padding 12 ---------- */
+.user-menu__footer {
+    padding: 12px;
+    border-top: 1px solid var(--um-border);
+}
+
+/* Mobile: que no se salga de la pantalla */
+@media (max-width: 360px) {
     .user-menu {
-      width: var(--um-width);
-      padding: 0;                       /* Figma: 0 */
-      font-family: var(--um-font);
-      color: var(--um-text);
-      border: 1px solid var(--um-border);
-      border-radius: var(--um-radius);
-      box-shadow: 0 8px 24px rgba(0, 0, 0, .10);
-      overflow: hidden;
-      --bs-dropdown-padding-y: 0;
+        width: calc(100vw - 24px);
     }
- 
-    /* ---------- 1. Header: padding 12 / 24 ---------- */
-    .user-menu__header {
-      padding: 12px 24px;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-    }
-    .user-menu__name  { margin: 0; font-size: 1rem; font-weight: 500; line-height: 1.3; }
-    .user-menu__email { margin: 0; font-size: .75rem; color: var(--um-muted); overflow: hidden; text-overflow: ellipsis; }
- 
-    /* ---------- 2. Cuerpo: vertical · gap 24 · padding 12 ---------- */
-    .user-menu__body {
-      padding: 12px;
-      display: flex;
-      flex-direction: column;
-      gap: 24px;
-      border-top: 1px solid var(--um-border);
-    }
-    .user-menu__list { list-style: none; margin: 0; padding: 0; }
- 
-    /* Item: horizontal · gap 8 · padding 8 / 12 */
-    .user-menu__item {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      padding: 8px 12px;
-      border-radius: 8px;
-      font-size: .875rem;
-      font-weight: 500;
-      color: var(--um-text);
-    }
-    .user-menu__item .bi-chevron-right { margin-left: auto; font-size: .75rem; }
-    .user-menu__item:hover,
-    .user-menu__item:focus-visible { background: var(--um-hover); color: var(--um-text); }
-    .user-menu__item:active { background: var(--um-hover); }
- 
-    /* Plan inactivo + CTA */
-    .user-menu__plan {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 8px;
-      padding: 0 12px;
-    }
-    .user-menu__plan-label { font-size: 1rem; font-weight: 500; }
-    .btn-subscribe {
-      --bs-btn-bg: var(--um-brand);
-      --bs-btn-border-color: var(--um-brand);
-      --bs-btn-color: #fff;
-      --bs-btn-hover-bg: var(--um-brand-hover);
-      --bs-btn-hover-border-color: var(--um-brand-hover);
-      --bs-btn-hover-color: #fff;
-      --bs-btn-active-bg: var(--um-brand-hover);
-      --bs-btn-active-border-color: var(--um-brand-hover);
-      --bs-btn-active-color: #fff;
-      --bs-btn-padding-x: 16px;
-      --bs-btn-padding-y: 6px;
-      --bs-btn-font-size: .8125rem;
-      --bs-btn-font-weight: 500;
-      --bs-btn-border-radius: 999px;
-      font-family: var(--um-font);
-    }
- 
-    /* ---------- 3. Footer: padding 12 ---------- */
-    .user-menu__footer {
-      padding: 12px;
-      border-top: 1px solid var(--um-border);
-    }
- 
-    /* Mobile: que no se salga de la pantalla */
-    @media (max-width: 360px) {
-      .user-menu { width: calc(100vw - 24px); }
-    }
+}
 
 /* End Btn dropdown */
 
