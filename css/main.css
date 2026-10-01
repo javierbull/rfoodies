@@ -683,15 +683,6 @@ body {
 }
 
 /* ---- Panel del menú ---- */
-/* ---------- Tokens (ajusta a los de tu Figma) ---------- */
-:root {
-    --um-border: #e5e7eb;
-    --um-text: #1f2328;
-    --um-muted: #8a9099;
-    --um-hover: #f3f4f6;
-    --um-brand: #c8283d;
-    --um-brand-hover: #a81f32;
-}
 
 /* ---------- Contenedor: Vertical · Fixed · Hug · padding 0 · gap 0 ---------- */
 .user-menu {
@@ -857,7 +848,7 @@ body {
 .hero-carousel-wrap {
     max-width: 100%;
     margin-inline: auto;
-    padding-inline: calc(var(--hero-arrow-size) / 2 + 12px);
+    /* padding-inline: calc(2.5rem / 2 + 12px); */
 }
 
 .hero-carousel {
@@ -940,7 +931,7 @@ body {
     margin: 0;
     background-color: var(--bg-fill-black-secondary);
     /* inactivo */
-    opacity: .7;
+    opacity: .9;
     transition: width .3s ease, background-color .3s ease;
 }
 
