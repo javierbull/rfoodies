@@ -280,24 +280,77 @@
             <h2 class="headline_2 mb-2">Navbar</h2>
 
             <nav class="navbar-desktop">
-                <div class="navbar-top">
+                <div class="navbar-desktop-top">
                     <a class="navbar-logo-link" href="#">
                         <img src="images/logos/logo.svg" alt="RFoodies Logo" class="logo-navbar">
                     </a>
 
-                    <div class="navbar-actions">
+                    <div class="navbar-desktop-actions">
                         <button type="button" class="btn primary-btn">
-                            <ion-icon name="arrow-back"></ion-icon>
-                            Primary
-                            <ion-icon name="arrow-forward"></ion-icon>
+                            Suscribirme
                         </button>
                         <button type="button" class="btn outline-btn">
-                            <ion-icon name="arrow-back"></ion-icon>
-                            Outline
-                            <ion-icon name="arrow-forward"></ion-icon>
+                            Iniciar sesión
                         </button>
-                        <div class="avatar">
-                            <span>J</span>
+                        <div class="dropdown">
+                            <button type="button" class="btn avatar-btn dropdown-toggle" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                J
+                            </button>
+
+                            <div class="dropdown-menu dropdown-menu-end user-menu">
+                                <!-- Header -->
+                                <div class="user-menu__header">
+                                    <p class="user-menu__name">Javier</p>
+                                    <p class="user-menu__email">Javierbullreyes@correo.com</p>
+                                </div>
+                                <!-- Cuerpo -->
+                                <div class="user-menu__body">
+                                    <ul class="user-menu__list">
+                                        <li>
+                                            <a class="user-menu__item dropdown-item" href="#profile.html">
+                                                <ion-icon name="person-outline"></ion-icon>
+                                                <span>Mi perfil</span>
+                                                <ion-icon name="chevron-forward-outline"></ion-icon>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a class="user-menu__item dropdown-item" href="#subscription.html">
+                                                <ion-icon name="card-outline"></ion-icon>
+                                                <span>Mi suscripción</span>
+                                                <ion-icon name="chevron-forward-outline"></ion-icon>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a class="user-menu__item dropdown-item" href="#receipts.html">
+                                                <ion-icon name="receipt-outline"></ion-icon>
+                                                <span>Mis comprobantes</span>
+                                                <ion-icon name="chevron-forward-outline"></ion-icon>
+                                            </a>
+                                        </li>
+                                    </ul>
+
+                                    <div class="user-menu__plan">
+                                        <p class="user-menu__plan-label">Plan inactivo</p>
+                                        <button type="button" class="btn primary-btn">
+                                            Suscribirme
+                                        </button>
+                                    </div>
+
+                                    <div class="user-menu__plan_active">
+                                        <p class="user-menu__plan-label">Plan Anual RFOODIES</p>
+                                        <p class="user-menu__plan-validity">Vigente hasta el 15/08/2027</p>
+                                    </div>
+                                </div>
+                                <!-- Footer -->
+                                <div class="user-menu__footer">
+                                    <a class="user-menu__item dropdown-item" href="#login.html">
+                                        <ion-icon name="log-out-outline"></ion-icon>
+                                        <span>Cerrar sesión</span>
+                                        <ion-icon name="chevron-forward-outline"></ion-icon>
+                                    </a>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>

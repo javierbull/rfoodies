@@ -696,7 +696,7 @@ body {
 /* ---------- Contenedor: Vertical · Fixed · Hug · padding 0 · gap 0 ---------- */
 .user-menu {
     min-width: 300px;
-    margin-top: 0.5rem;
+    margin-top: .5rem;
     padding: 0;
     border: 1px solid var(--border-primary);
     border-radius: 1.5rem;
@@ -825,6 +825,23 @@ body {
 
 .logo-navbar {
     height: 1.5rem;
+}
+
+.navbar-desktop-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar-desktop-actions {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+}
+
+.navbar-desktop .menu-tabs {
+    justify-content: center;
+    flex-grow: 1;
 }
 
 /* End Navbar */
