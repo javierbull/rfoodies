@@ -134,7 +134,6 @@
             <div class="avatar">
                 <span>J</span>
             </div>
-
         </div>
         <!-- End Avatars -->
 
@@ -365,9 +364,54 @@
                     <li class="nav-item"><a class="nav-link" href="#planes">Planes</a></li>
                 </ul>
             </nav>
-
         </div>
         <!-- End Navbar -->
+
+        <!-- Hero carousel -->
+        <div class="mb-5">
+            <h2 class="headline_2 mb-2">Hero carousel</h2>
+
+            <section class="hero-carousel-wrap py-5">
+                <div id="heroCarousel" class="carousel slide hero-carousel" data-bs-ride="carousel"
+                    aria-label="Destacados">
+
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active"
+                            aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1"
+                            aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2"
+                            aria-label="Slide 3"></button>
+                    </div>
+
+                    <div class="carousel-inner">
+                        <!-- Reemplaza cada src por tu imagen (recomendado: 2280 x 1050 px, para pantallas retina) -->
+                        <div class="carousel-item active" data-bs-interval="3000">
+                            <img src="images/bg/carousel-hero-1.jpg" alt="Slide 1">
+                        </div>
+                        <div class="carousel-item" data-bs-interval="3000">
+                            <img src="images/bg/carousel-hero-2.jpg" alt="Slide 2">
+                        </div>
+                        <div class="carousel-item" data-bs-interval="3000">
+                            <img src="images/bg/carousel-hero-3.jpg" alt="Slide 3">
+                        </div>
+                    </div>
+
+                    <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Anterior</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Siguiente</span>
+                    </button>
+
+                </div>
+            </section>
+        </div>
+        <!-- End Hero carousel -->
 
 
     </div>

@@ -819,8 +819,8 @@ body {
 /* Navbar */
 .navbar-desktop {
     background-color: var(--bg-surface-primary);
-    padding: 1rem 2.5rem;
-    height: 4rem;
+    padding: 0 2.5rem;
+    box-shadow: var(--shadow-primary);
 }
 
 .logo-navbar {
@@ -831,6 +831,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding: 0.5rem 0;
 }
 
 .navbar-desktop-actions {
@@ -845,6 +846,117 @@ body {
 }
 
 /* End Navbar */
+
+/* Carousel hero */
+:root {
+    --hero-radius: 24px;
+    --hero-arrow-size: 40px;
+}
+
+/* Espacio lateral para que las flechas (que sobresalen la mitad) no se corten */
+.hero-carousel-wrap {
+    max-width: 100%;
+    margin-inline: auto;
+    padding-inline: calc(var(--hero-arrow-size) / 2 + 12px);
+}
+
+.hero-carousel {
+    position: relative;
+}
+
+/* Imagen: proporción 1140 x 525 del diseño, recorte con cover */
+.hero-carousel .carousel-inner {
+    border-radius: 1.5rem;
+    isolation: isolate;
+    /* evita glitch del radio en Safari al deslizar */
+}
+
+.hero-carousel .carousel-item img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 1140 / 525;
+    object-fit: cover;
+}
+
+@media (max-width: 767.98px) {
+    .hero-carousel .carousel-item img {
+        aspect-ratio: 4 / 3;
+    }
+}
+
+/* Flechas: círculo negro, borde blanco, centradas sobre el borde de la imagen */
+.hero-carousel .carousel-control-prev,
+.hero-carousel .carousel-control-next {
+    top: 50%;
+    bottom: auto;
+    width: 2.5rem;
+    height: 2.5rem;
+    transform: translateY(-50%);
+    background: var(--bg-fill-black);
+    border: 1.5px solid var(--border-tertiary);
+    border-radius: 50%;
+    opacity: 1;
+    z-index: 3;
+}
+
+.hero-carousel .carousel-control-prev {
+    left: calc(var(--hero-arrow-size) / -2);
+}
+
+.hero-carousel .carousel-control-next {
+    right: calc(var(--hero-arrow-size) / -2);
+}
+
+.hero-carousel .carousel-control-prev:hover,
+.hero-carousel .carousel-control-next:hover {
+    background: var(--bg-fill-brand);
+}
+
+.hero-carousel .carousel-control-prev-icon,
+.hero-carousel .carousel-control-next-icon {
+    width: 1rem;
+    height: 1rem;
+}
+
+/* Indicadores: debajo de la imagen. El activo se alarga como píldora */
+.hero-carousel {
+    margin-bottom: 2rem;
+    /* espacio reservado para los indicadores */
+}
+
+.hero-carousel .carousel-indicators {
+    top: 100%;
+    /* justo debajo de la imagen */
+    bottom: auto;
+    margin: 2px 0 0;
+    /* + 10px de borde transparente = ~12px de separación */
+    gap: 4px;
+}
+
+.hero-carousel .carousel-indicators [data-bs-target] {
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    margin: 0;
+    background-color: var(--bg-fill-black-secondary);
+    /* inactivo */
+    opacity: .7;
+    transition: width .3s ease, background-color .3s ease;
+}
+
+.hero-carousel .carousel-indicators .active {
+    opacity: 1;
+    background-color: var(--bg-fill-brand);
+    /* activo: rojo del botón Suscribirme */
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .hero-carousel .carousel-indicators [data-bs-target] {
+        transition: none;
+    }
+}
+
+/* End Carousel hero */
 
 
 /* END COMPONENTS */
