@@ -1023,6 +1023,55 @@ body {
     top: 0.75rem;
     left: 0.75rem;
 }
+ 
+    /* Horizontal · Start/Start · Fixed width · Hug height · gap 12 · padding 24 */
+    .prize-card {
+      display: flex;
+      flex-direction: row;
+      align-items: flex-start;
+      justify-content: flex-start;
+      gap: .75rem;
+      width: 20rem;
+      max-width: 100%;
+      padding: 1.5rem;
+      background: var(--bg-fill-secondary);
+    }
+ 
+    .prize-card__badge {
+      flex: 0 0 2rem;
+      width: 2rem;
+      height: 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 8px;
+      background: var(--bg-fill-brand);
+      color: var(--text-on-primary);
+      font-size: 1.25rem;
+      font-weight: 600;
+      line-height: 1;
+    }
+ 
+    .prize-card__content {
+      flex: 1 1 auto;
+      min-width: 0;
+      color: var(--text-primary);
+    }
+ 
+    .prize-card__title {
+      margin: 0;
+      font-size: 1.25rem;
+      font-weight: 600;
+      line-height: 2rem;                /* misma altura que el badge para alinear */
+      
+    }
+ 
+    .prize-card__text {
+      margin: 4px 0 0;
+      font-size: .875rem;
+      font-weight: 400;
+      color: var(--text-secondary);
+    }
 
 /* End cards */
 
