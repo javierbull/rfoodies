@@ -1180,8 +1180,62 @@ body {
     letter-spacing: .02em;
     color: var(--text-secondary);
 }
-
 /* End testimonial cards */
+
+/* Social proof cards */
+.social-proof-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    padding: 1.5rem;
+    background: var(--bg-fill-secondary);
+    margin-bottom: 0;
+}
+
+.social-proof-card__content {
+    text-align: center;
+}
+
+.social-proof-card__title {
+    margin: 0;
+    font-size: 2.5rem;
+    font-weight: 700;
+    line-height: 3rem;
+    color: var(--text-brand);
+}
+
+.social-proof-card__text {
+    margin: 0;
+    font-size: .875rem;
+    font-weight: 400;
+    color: var(--text-secondary);
+    margin-bottom: 0;
+}
+
+.social-proof__grid {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1.25rem;
+    background: var(--bg-fill-secondary);
+    border-radius: 1rem;
+    overflow: hidden;
+}
+
+.social-proof__banner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.25rem;
+    padding: 1.5rem;
+    background: var(--gradient-primary);
+    border-radius: 1.5rem;
+}
+/* End social proof cards */
 
 /* End cards */
 
