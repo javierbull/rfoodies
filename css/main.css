@@ -979,6 +979,8 @@ body {
 .card-product .card-img-top {
     border-radius: 1rem;
     margin-bottom: .75rem;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
 }
 
 .card-product .card-body {
