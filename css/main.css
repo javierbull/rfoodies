@@ -967,6 +967,7 @@ body {
     -ms-border-radius: .5rem;
     -o-border-radius: .5rem;
 }
+
 /* End badge */
 
 /* Cards */
@@ -1023,84 +1024,164 @@ body {
     top: 0.75rem;
     left: 0.75rem;
 }
- 
-    /* Horizontal · Start/Start · Fixed width · Hug height · gap 12 · padding 24 */
-    .prize-card {
-      display: flex;
-      flex-direction: row;
-      align-items: flex-start;
-      justify-content: flex-start;
-      gap: .75rem;
-      width: 20rem;
-      max-width: 100%;
-      padding: 1.5rem;
-      background: var(--bg-fill-secondary);
-    }
- 
-    .prize-card__badge {
-      flex: 0 0 2rem;
-      width: 2rem;
-      height: 2rem;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      border-radius: 8px;
-      background: var(--bg-fill-brand);
-      color: var(--text-on-primary);
-      font-size: 1.25rem;
-      font-weight: 600;
-      line-height: 1;
-    }
- 
-    .prize-card__content {
-      flex: 1 1 auto;
-      min-width: 0;
-      color: var(--text-primary);
-    }
- 
-    .prize-card__title {
-      margin: 0;
-      font-size: 1.25rem;
-      font-weight: 600;
-      line-height: 2rem;                /* misma altura que el badge para alinear */
-      
-    }
- 
-    .prize-card__text, .prize-card__list {
-      margin: 4px 0 0;
-      font-size: .875rem;
-      font-weight: 400;
-      color: var(--text-secondary);
-    }
 
-    .wrap-prize-cards {
-      display: flex;
-      flex-direction: column;
-      gap: 2px;
-      border-radius: 1rem;
-      overflow: hidden;
-    }
+/* prize cards */
+.prize-card {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: .75rem;
+    width: 20rem;
+    max-width: 100%;
+    padding: 1.5rem;
+    background: var(--bg-fill-secondary);
+}
 
-    .wrap-prize-cards .prize-card {
-      width: 100%;
-    }
+.prize-card__badge {
+    flex: 0 0 2rem;
+    width: 2rem;
+    height: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    background: var(--bg-fill-brand);
+    color: var(--text-on-primary);
+    font-size: 1.25rem;
+    font-weight: 600;
+    line-height: 1;
+}
 
-    .card-monthly-prizes {
-        background-color: var(--bg-fill-black-secondary);
-        border-radius: 1.5rem;
-        padding: 1.5rem 1.5rem 1.5rem 400px;
-        display: flex;
-        align-items: flex-end;
-        justify-content: center;
-        position: relative;
-    }
+.prize-card__content {
+    flex: 1 1 auto;
+    min-width: 0;
+    color: var(--text-primary);
+}
 
-    .card-monthly-prizes img {
-        position: absolute;
-        left: .5rem;
-        bottom: 0;        
-        width: 380px;
-    }
+.prize-card__title {
+    margin: 0;
+    font-size: 1.25rem;
+    font-weight: 600;
+    line-height: 2rem;
+    /* misma altura que el badge para alinear */
+
+}
+
+.prize-card__text,
+.prize-card__list {
+    margin: 4px 0 0;
+    font-size: .875rem;
+    font-weight: 400;
+    color: var(--text-secondary);
+}
+
+.wrap-prize-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    border-radius: 1rem;
+    overflow: hidden;
+}
+
+.wrap-prize-cards .prize-card {
+    width: 100%;
+}
+
+.card-monthly-prizes {
+    background-color: var(--bg-fill-black-secondary);
+    border-radius: 1.5rem;
+    padding: 1.5rem 1.5rem 1.5rem 400px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    position: relative;
+}
+
+.card-monthly-prizes img {
+    position: absolute;
+    left: .5rem;
+    bottom: 0;
+    width: 380px;
+}
+
+/* testimonial cards */
+
+/* Siempre en una sola fila horizontal. Si no caben, se desliza hacia los lados */
+.testimonials__grid {
+    display: grid;
+    /* todas las cards comparten el alto de la fila */
+    grid-auto-flow: column;
+    grid-auto-columns: 1fr;
+    align-items: stretch;
+    justify-content: safe center;
+    /* centrado si caben; si no, empieza desde la izquierda */
+    gap: 1.25rem;
+    overflow-x: auto;
+    padding-bottom: 8px;
+    /* aire para la barra de scroll */
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+}
+
+/* Vertical · Start/Start · Fixed width · Hug height · gap 12 · padding 24 */
+.testimonial-card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: .75rem;
+    height: 100%;
+    /* ocupa todo el alto de la fila */
+    scroll-snap-align: center;
+    margin: 0;
+    padding: 1.5rem;
+    border-radius: 1rem;
+    background: var(--bg-fill-secondary);
+}
+
+.testimonial-card__quote {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: .02em;
+    font-style: italic;
+}
+
+/* Si las cards quedan en la misma fila, el autor siempre se alinea abajo */
+.testimonial-card__author {
+    display: flex;
+    align-items: center;
+    gap: .75rem;
+    margin-top: auto;
+}
+
+.testimonial-card__avatar {
+    flex: 0 0 3rem;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    border: 2px solid var(--border-secondary);
+    object-fit: cover;
+}
+
+.testimonial-card__name {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1.3;
+}
+
+.testimonial-card__meta {
+    margin: 0;
+    font-size: .875rem;
+    line-height: 1.4;
+    letter-spacing: .02em;
+    color: var(--text-secondary);
+}
+
+/* End testimonial cards */
 
 /* End cards */
 
