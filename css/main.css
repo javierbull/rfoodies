@@ -969,4 +969,50 @@ body {
 }
 /* End badge */
 
+/* Cards */
+.card-product {
+    border-radius: 0;
+    max-width: 22.5rem;
+    position: relative;
+}
+
+.card-product .card-img-top {
+    border-radius: 1rem;
+    margin-bottom: .75rem;
+}
+
+.card-product .card-body {
+    padding: 0;
+}
+
+.card-product .info-promo {
+    font-size: 1.25rem;
+    font-weight: 600;
+    line-height: 2rem;
+    color: var(--text-brand);
+}
+
+.card-product .card-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    line-height: 1.25rem;
+    margin-bottom: .25rem;
+    text-transform: uppercase;
+}
+
+.card-product .card-description {
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.25rem;
+    color: var(--text-secondary);
+}
+
+.card-product .badge-rf {
+    position: absolute;
+    top: 0.75rem;
+    left: 0.75rem;
+}
+
+/* End cards */
+
 /* END COMPONENTS */
