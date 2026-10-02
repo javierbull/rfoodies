@@ -931,7 +931,7 @@ body {
     margin: 0;
     background-color: var(--bg-fill-black-secondary);
     /* inactivo */
-    opacity: .9;
+    opacity: 1;
     transition: width .3s ease, background-color .3s ease;
 }
 
@@ -949,5 +949,24 @@ body {
 
 /* End Carousel hero */
 
+/* Badge */
+.badge-rf {
+    background-color: var(--bg-fill-accent);
+    color: var(--text-primary);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: .5rem;
+    padding: .375rem .75rem;
+    font-size: .875rem;
+    font-weight: 500;
+    line-height: 1.25rem;
+    border-radius: .5rem;
+    -webkit-border-radius: .5rem;
+    -moz-border-radius: .5rem;
+    -ms-border-radius: .5rem;
+    -o-border-radius: .5rem;
+}
+/* End badge */
 
 /* END COMPONENTS */
