@@ -1066,11 +1066,40 @@ body {
       
     }
  
-    .prize-card__text {
+    .prize-card__text, .prize-card__list {
       margin: 4px 0 0;
       font-size: .875rem;
       font-weight: 400;
       color: var(--text-secondary);
+    }
+
+    .wrap-prize-cards {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+      border-radius: 1rem;
+      overflow: hidden;
+    }
+
+    .wrap-prize-cards .prize-card {
+      width: 100%;
+    }
+
+    .card-monthly-prizes {
+        background-color: var(--bg-fill-black-secondary);
+        border-radius: 1.5rem;
+        padding: 1.5rem 1.5rem 1.5rem 400px;
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+        position: relative;
+    }
+
+    .card-monthly-prizes img {
+        position: absolute;
+        left: .5rem;
+        bottom: 0;        
+        width: 380px;
     }
 
 /* End cards */
