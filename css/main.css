@@ -306,7 +306,9 @@ body {
     align-items: center;
     justify-content: center;
     gap: .5rem;
-    border: 2px solid;
+    border-width: 2px;
+    border-style: solid;
+    border-color: var(--bs-btn-border-color, var(--border-focus));
     border-radius: 2rem;
     -webkit-border-radius: 2rem;
     -moz-border-radius: 2rem;
@@ -325,7 +327,7 @@ body {
     --bs-btn-border-color: var(--border-brand);
     --bs-btn-hover-color: var(--text-on-primary);
     --bs-btn-hover-bg: var(--bg-fill-brand-hover);
-    --bs-btn-hover-border-color: var(--border-brand-hover);
+    --bs-btn-hover-border-color: var(--border-brand);
     --bs-btn-focus-shadow-rgb: var(--btn-focus-shadow);
     --bs-btn-active-color: var(--text-on-primary);
     --bs-btn-active-bg: var(--bg-fill-brand);
@@ -1180,6 +1182,7 @@ body {
     letter-spacing: .02em;
     color: var(--text-secondary);
 }
+
 /* End testimonial cards */
 
 /* Social proof cards */
@@ -1235,7 +1238,125 @@ body {
     background: var(--gradient-primary);
     border-radius: 1.5rem;
 }
+
 /* End social proof cards */
+
+/* Plan cards */
+:root {
+    --plan-bg: #262626;
+    --plan-border: #3d3d3d;
+    --plan-divider: #4a4a4a;
+    --plan-text: #ffffff;
+    --plan-muted: #e6e6e6;
+    --plan-cta: #d62839;
+    --plan-cta-hover: #b81f30;
+    --plan-radius: 12px;
+    --plan-font: "Poppins", system-ui, sans-serif;
+}
+
+/* Una sola fila horizontal: mismo ancho y mismo alto (el de la card más alta).
+       Si la pantalla no alcanza, la fila se desliza hacia los lados. */
+.plans__grid {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 1fr;
+    align-items: stretch;
+    /* todas toman el alto de la más alta */
+    justify-content: safe center;
+    /* centradas si caben; si no, desde la izquierda */
+    gap: 1.25rem;
+    overflow-x: auto;
+    padding-bottom: .5rem;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+}
+
+/* Card: Vertical · Center · Fixed · Hug · padding 0 · gap 0 */
+.plan-card {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    padding: 0;
+    height: 100%;
+    /* ocupa todo el alto de la fila */
+    scroll-snap-align: center;
+    overflow: hidden;
+    background: var(--bg-fill-black-secondary);
+    border: 1px solid var(--border-on-dark);
+    border-radius: 1rem;
+    color: var(--text-on-primary);
+}
+
+/* Header: Vertical · Center · gap 4 · padding 20 24 12 */
+.plan-card__header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: .5rem;
+    padding: 1.25rem 1.5rem;
+    text-align: center;
+}
+
+.plan-card__name {
+    margin: 0;
+    font-size: .875rem;
+    font-weight: 400;
+    letter-spacing: .04em;
+    text-transform: uppercase;
+}
+
+.plan-card__price {
+    margin: 0;
+    font-size: 2.5rem;
+    font-weight: 700;
+    line-height: 1.1;
+}
+
+/* Body: Vertical · Start · gap 20 · padding 24 */
+.plan-card__body {
+    flex: 1 1 auto;
+    /* empuja el footer abajo si hay menos beneficios */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.25rem;
+    margin: 0;
+    padding: 1.5rem;
+    list-style: none;
+    border-top: 1px solid var(--border-on-dark);
+}
+
+.plan-card__body .badge-rf {
+    width: 100%;
+}
+
+.plan-card__benefit {
+    display: flex;
+    gap: .5rem;
+    font-size: 1rem;
+    line-height: 1.2;
+}
+
+.plan-card__benefit::before {
+    content: "\2713";
+    /* ✓ */
+    flex: 0 0 auto;
+}
+
+/* Footer: Vertical · Center · gap 10 · padding 20 24 */
+.plan-card__footer {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+    padding: 1.25rem 1.5rem;
+    border-top: 1px solid var(--border-on-dark);
+}
+
+
+
+/* End plan cards */
 
 /* End cards */
 
