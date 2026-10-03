@@ -105,7 +105,7 @@
     --bg-fill-success: var(--green-500);
     --bg-fill-success-secondary: var(--green-050);
     --bg-fill-warning: var(--orange-500);
-    --bg-fill-warning-secondary: var(--orange-050);
+    --bg-fill-warning-secondary: var(--orange-100);
     --bg-fill-info: var(--blue-500);
     --bg-fill-info-secondary: var(--blue-050);
     --bg-fill-white: var(--default-white);
@@ -1353,6 +1353,7 @@ body {
     padding: 1.25rem 1.5rem;
     border-top: 1px solid var(--border-on-dark);
 }
+
 /* End plan cards */
 
 /* End cards */
@@ -1376,7 +1377,106 @@ body {
     color: var(--text-on-primary);
 }
 
+/* End Headers */
 
-/* EndHeaders */
+/* Alerts */
+/*
+      Prefijo "notice-" para no chocar con Bootstrap
+      (por eso NO uso .alert, .alert-info, .alert-warning, .alert-success ni .alert-danger).
+    */
+:root {
+    --notice-font: "Poppins", system-ui, sans-serif;
+    --notice-text: #111111;
+    --notice-info-bg: #eaf5fe;
+    --notice-info-border: #0d63f3;
+    --notice-info-icon: #0d63f3;
+    --notice-warning-bg: #ffebd6;
+    --notice-warning-border: #d9531e;
+    --notice-warning-icon: #c2410c;
+    --notice-success-bg: #edfae8;
+    --notice-success-border: #2e7d32;
+    --notice-success-icon: #1f7a1f;
+    --notice-error-bg: #ffe1e4;
+    --notice-error-border: #c8102e;
+    --notice-error-icon: #b91c2c;
+}
+
+.notice-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+/* Horizontal · Start/Start · Fixed width · Hug height · gap 12 · padding 16 */
+.notice {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: .75rem;
+    width: 100%;
+    padding: 1rem;
+    border: 1px solid var(--notice-border);
+    border-radius: 1rem;
+    background: var(--notice-bg);
+}
+
+.notice__icon {
+    flex: 0 0 1.5rem;
+    width: 1.5rem;
+    height: 1.5rem;
+    font-size: 1.5rem;
+    /* tamaño del ion-icon */
+    color: var(--notice-icon);
+}
+
+.notice__content {
+    flex: 1 1 auto;
+    min-width: 0;
+}
+
+.notice__title {
+    margin: 0;
+    font-size: 1.125rem;
+    font-weight: 500;
+    line-height: 1.5rem;
+    /* misma altura que el ícono para alinearlos */
+}
+
+.notice__text {
+    margin: 4px 0 0;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.4;
+}
+
+/* Variantes */
+.notice--info {
+    --notice-bg: var(--bg-fill-info-secondary);
+    --notice-border: var(--border-info);
+    --notice-icon: var(--text-info);
+}
+
+.notice--warning {
+    --notice-bg: var(--bg-fill-warning-secondary);
+    --notice-border: var(--border-warning);
+    --notice-icon: var(--text-warning);
+}
+
+.notice--success {
+    --notice-bg: var(--bg-fill-success-secondary);
+    --notice-border: var(--border-success);
+    --notice-icon: var(--text-success);
+}
+
+.notice--error {
+    --notice-bg: var(--bg-fill-danger-secondary);
+    --notice-border: var(--border-error);
+    --notice-icon: var(--text-error);
+}
+
+/* End Alerts */
+
+
 
 /* END COMPONENTS */
