@@ -1353,11 +1353,30 @@ body {
     padding: 1.25rem 1.5rem;
     border-top: 1px solid var(--border-on-dark);
 }
-
-
-
 /* End plan cards */
 
 /* End cards */
+
+/* Headers */
+.header-section__subtitle {
+    text-transform: uppercase;
+    color: var(--text-brand);
+}
+
+.header-section__title {
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.header-section__dark .header-section__subtitle {
+    color: var(--text-brand-dark);
+}
+
+.header-section__dark .header-section__title {
+    color: var(--text-on-primary);
+}
+
+
+/* EndHeaders */
 
 /* END COMPONENTS */
