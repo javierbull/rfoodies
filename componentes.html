@@ -20,6 +20,7 @@
 <body>
 
     <div class="container">
+        <!-- Icons -->
         <div class="mb-5">
             <h1 class="display_1">UI Kit</h1>
             <h2 class="headline_1">Iconos</h2>
@@ -30,7 +31,7 @@
             <ion-icon name="american-football-outline"></ion-icon>
             <ion-icon name="beer-outline"></ion-icon>
         </div>
-
+        <!-- End icons -->
 
         <!-- Buttons -->
         <div class="mb-5">
@@ -66,7 +67,6 @@
                 <ion-icon name="arrow-back"></ion-icon>
             </button>
         </div>
-
         <!-- End buttons -->
 
         <!-- Links -->
@@ -833,6 +833,99 @@
         </div>
         <!-- End Cards -->
 
+        <!-- Carousels -->
+        <div class="mb-5">
+            <h2 class="headline_2 mb-2">Carousels</h2>
+
+            <section class="carousel-benefits" aria-roledescription="carrusel"
+                aria-label="Beneficios para suscriptores">
+
+                <button class="carousel-btn prev" type="button" aria-label="Anterior">
+                    <svg class="ionicon" viewBox="0 0 512 512" aria-hidden="true">
+                        <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                            stroke-width="48" d="M328 112L184 256l144 144" />
+                    </svg>
+                </button>
+
+                <div class="carousel-track" tabindex="0">
+
+                    <div class="card-product">
+                        <span class="badge badge-rf">
+                            <ion-icon name="star"></ion-icon>
+                            Solo para suscriptores
+                        </span>
+                        <img src="images/beneficios/isuhi-bar.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <span class="info-promo">
+                                S/ 29.90
+                            </span>
+                            <h5 class="card-title">Isushi Bar</h5>
+                            <p class="card-description">
+                                Disfruta de 6 Makis + 6 Ebis
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="card-product">
+                        <span class="badge badge-rf">
+                            <ion-icon name="star"></ion-icon>
+                            Solo para suscriptores
+                        </span>
+                        <img src="images/beneficios/la-bisteca.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <span class="info-promo">
+                                30% Dscto.
+                            </span>
+                            <h5 class="card-title">La Bisteca</h5>
+                            <p class="card-description">
+                                30% de descuento en buffet ilimitado de cenas.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="card-product">
+                        <span class="badge badge-rf">
+                            <ion-icon name="star"></ion-icon>
+                            Solo para suscriptores
+                        </span>
+                        <img src="images/restaurantes/cala.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <div class="star-raiting">
+                                <ion-icon name="star"></ion-icon>
+                                4.5
+                            </div>
+                            <h5 class="card-title">Cala Restaurante</h5>
+                            <p class="card-description">
+                                Peruana, Mariscos
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="card-product">
+                        <span class="badge badge-rf">
+                            <ion-icon name="star"></ion-icon>
+                            Solo para suscriptores
+                        </span>
+                        <img src="images/premios/premio1.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">
+                                Cocina a gas NX52T3310PV, 6 hornillas Silver
+                            </h5>
+                        </div>
+                    </div>
+                </div>
+
+                <button class="carousel-btn next" type="button" aria-label="Siguiente">
+                    <svg class="ionicon" viewBox="0 0 512 512" aria-hidden="true">
+                        <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                            stroke-width="48" d="M184 112l144 144-144 144" />
+                    </svg>
+                </button>
+
+            </section>
+        </div>
+        <!-- End Carousels -->
+
         <!-- Headers -->
         <div class="mb-5">
             <h2 class="headline_2 mb-2">Headers</h2>
@@ -905,6 +998,8 @@
             </div>
         </div>
         <!-- End Alerts -->
+
+
     </div>
 
     <footer class="site-footer">
@@ -944,9 +1039,12 @@
             <div class="site-footer__col">
                 <h2 class="site-footer__title">Redes sociales</h2>
                 <ul class="site-footer__social">
-                    <li><a href="https://www.tiktok.com/@chefrodrigofernandini" target="_blank" aria-label="TikTok"><ion-icon name="logo-tiktok"></ion-icon></a></li>
-                    <li><a href="https://www.instagram.com/rodrigofernandini/?hl=es-la" target="_blank" aria-label="Instagram"><ion-icon name="logo-instagram"></ion-icon></a></li>
-                    <li><a href="https://www.youtube.com/@rodrigofernandini" target="_blank" aria-label="YouTube"><ion-icon name="logo-youtube"></ion-icon></a></li>
+                    <li><a href="https://www.tiktok.com/@chefrodrigofernandini" target="_blank"
+                            aria-label="TikTok"><ion-icon name="logo-tiktok"></ion-icon></a></li>
+                    <li><a href="https://www.instagram.com/rodrigofernandini/?hl=es-la" target="_blank"
+                            aria-label="Instagram"><ion-icon name="logo-instagram"></ion-icon></a></li>
+                    <li><a href="https://www.youtube.com/@rodrigofernandini" target="_blank"
+                            aria-label="YouTube"><ion-icon name="logo-youtube"></ion-icon></a></li>
                 </ul>
             </div>
 
@@ -958,7 +1056,46 @@
 
     </footer>
 
+    <script>
+        (function () {
+            const root = document.querySelector('.carousel-benefits');
+            const track = root.querySelector('.carousel-track');
+            const prev = root.querySelector('.prev');
+            const next = root.querySelector('.next');
 
+            // Distancia de un desplazamiento = ancho de una card + gap
+            function step() {
+                const card = track.querySelector('.card-product');
+                const gap = parseFloat(getComputedStyle(track).columnGap) || 0;
+                return card.getBoundingClientRect().width + gap;
+            }
+
+            // Centra los botones verticalmente respecto a la imagen
+            function alignButtons() {
+                const img = track.querySelector('.card-img-top');
+                root.style.setProperty('--btn-top', (img.offsetHeight / 2) + 'px');
+            }
+
+            function updateState() {
+                const max = track.scrollWidth - track.clientWidth - 1;
+                prev.disabled = track.scrollLeft <= 0;
+                next.disabled = track.scrollLeft >= max;
+            }
+
+            prev.addEventListener('click', () => track.scrollBy({ left: -step() }));
+            next.addEventListener('click', () => track.scrollBy({ left: step() }));
+            track.addEventListener('scroll', updateState, { passive: true });
+            track.addEventListener('keydown', (e) => {
+                if (e.key === 'ArrowRight') next.click();
+                if (e.key === 'ArrowLeft') prev.click();
+            });
+            window.addEventListener('resize', () => { alignButtons(); updateState(); });
+            track.querySelectorAll('img').forEach(i => i.addEventListener('load', alignButtons));
+
+            alignButtons();
+            updateState();
+        })();
+    </script>
 
     <!-- Js-files -->
     <script type="module" src="https://unpkg.com/ionicons@8.0.13/dist/ionicons/ionicons.esm.js"></script>

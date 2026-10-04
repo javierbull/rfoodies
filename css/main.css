@@ -1243,17 +1243,6 @@ body {
 /* End social proof cards */
 
 /* Plan cards */
-:root {
-    --plan-bg: #262626;
-    --plan-border: #3d3d3d;
-    --plan-divider: #4a4a4a;
-    --plan-text: #ffffff;
-    --plan-muted: #e6e6e6;
-    --plan-cta: #d62839;
-    --plan-cta-hover: #b81f30;
-    --plan-radius: 12px;
-    --plan-font: "Poppins", system-ui, sans-serif;
-}
 
 /* Una sola fila horizontal: mismo ancho y mismo alto (el de la card más alta).
        Si la pantalla no alcanza, la fila se desliza hacia los lados. */
@@ -1381,26 +1370,6 @@ body {
 /* End Headers */
 
 /* Alerts */
-/*
-      Prefijo "notice-" para no chocar con Bootstrap
-      (por eso NO uso .alert, .alert-info, .alert-warning, .alert-success ni .alert-danger).
-    */
-:root {
-    --notice-font: "Poppins", system-ui, sans-serif;
-    --notice-text: #111111;
-    --notice-info-bg: #eaf5fe;
-    --notice-info-border: #0d63f3;
-    --notice-info-icon: #0d63f3;
-    --notice-warning-bg: #ffebd6;
-    --notice-warning-border: #d9531e;
-    --notice-warning-icon: #c2410c;
-    --notice-success-bg: #edfae8;
-    --notice-success-border: #2e7d32;
-    --notice-success-icon: #1f7a1f;
-    --notice-error-bg: #ffe1e4;
-    --notice-error-border: #c8102e;
-    --notice-error-icon: #b91c2c;
-}
 
 .notice-list {
     display: flex;
@@ -1562,5 +1531,115 @@ body {
 }
 
 /* End Footer */
+
+/* Carousels */
+
+/* ---------- Carousel ---------- */
+.carousel-benefits {
+    position: relative;
+    margin: 0 auto;
+}
+
+.carousel-track {
+    display: flex;
+    gap: 1.25rem;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+}
+
+.carousel-track::-webkit-scrollbar {
+    display: none;
+}
+
+/* 3 cards visibles: ocupan todo el ancho del contenedor */
+.carousel-track>.card-product {
+    flex: 0 0 calc((100% - 2 * 1.25rem) / 3);
+    scroll-snap-align: start;
+}
+
+/* ---------- Botones (posicion absoluta, no restan ancho) ---------- */
+.carousel-btn {
+    position: absolute;
+    top: var(--btn-top, 6rem);
+    /* se ajusta por JS al centro de la imagen */
+    z-index: 2;
+    width: 2.5rem;
+    height: 2.5rem;
+    padding: 0;
+    border: 1.5px solid var(--border-chakra);
+    border-radius: 50%;
+    background: var(--bg-fill-black);
+    color: var(--text-on-primary);
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+    transform: translate(var(--shift), -50%);
+    transition: opacity .2s, background .2s;
+}
+
+.carousel-btn.prev {
+    left: 0;
+    --shift: -50%;
+}
+
+.carousel-btn.next {
+    right: 0;
+    --shift: 50%;
+}
+
+.carousel-btn:hover {
+    background: var(--bg-fill-brand);
+}
+
+.carousel-btn:focus-visible {
+    outline: 2px solid var(--border-brand);
+    outline-offset: 3px;
+}
+
+.carousel-btn:disabled {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.carousel-btn .ionicon {
+    width: 1.25rem;
+    height: 1.25rem;
+    display: block;
+}
+
+.carousel-track>.card-product {
+    max-width: none;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 991px) {
+    .carousel-track>.card-product {
+        flex-basis: calc((100% - 1.25rem) / 2);
+    }
+}
+
+@media (max-width: 575px) {
+    .carousel-track>.card-product {
+        flex-basis: 85%;
+    }
+
+    .carousel-btn.prev {
+        --shift: 0;
+    }
+
+    .carousel-btn.next {
+        --shift: 0;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .carousel-track {
+        scroll-behavior: auto;
+    }
+}
+
+/* End Carousels */
 
 /* END COMPONENTS */
