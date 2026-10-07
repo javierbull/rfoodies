@@ -1653,7 +1653,7 @@ body {
     width: max-content;
     overflow: visible;      /* anula el overflow-x que causa el scroll */
     gap: 0;                 /* evita que un gap de tu CSS rompa el loop */
-    animation: scroll-winners 30s linear infinite;
+    animation: scroll-winners 50s linear infinite;
 }
 
 .winners-carousel:hover .winners-gallery {
@@ -1662,16 +1662,16 @@ body {
 
 .card-winners {
     flex: 0 0 auto;
-    width: 280px;
+    width: auto;
     height: 360px;          /* mismo alto para todas */
-    margin-right: 20px;
+    margin-right: 1.25rem;
     overflow: hidden;
-    border-radius: 12px;
+    border-radius: 1rem;
 }
 
 .card-winners img {
     display: block;
-    width: 100%;
+    width: auto;
     height: 100%;
     object-fit: cover;      /* recorta para llenar sin deformar */
     object-position: center;
