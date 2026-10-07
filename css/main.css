@@ -1642,4 +1642,49 @@ body {
 
 /* End Carousels */
 
+/* Winners Gallery */
+.winners-carousel {
+    overflow: hidden;
+    width: 100%;
+}
+
+.winners-gallery {
+    display: flex;
+    width: max-content;
+    overflow: visible;      /* anula el overflow-x que causa el scroll */
+    gap: 0;                 /* evita que un gap de tu CSS rompa el loop */
+    animation: scroll-winners 30s linear infinite;
+}
+
+.winners-carousel:hover .winners-gallery {
+    animation-play-state: paused;
+}
+
+.card-winners {
+    flex: 0 0 auto;
+    width: 280px;
+    height: 360px;          /* mismo alto para todas */
+    margin-right: 20px;
+    overflow: hidden;
+    border-radius: 12px;
+}
+
+.card-winners img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;      /* recorta para llenar sin deformar */
+    object-position: center;
+}
+
+@keyframes scroll-winners {
+    from { transform: translateX(0); }
+    to   { transform: translateX(-50%); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .winners-gallery { animation: none; }
+}
+/* End Winners Gallery */
+
 /* END COMPONENTS */

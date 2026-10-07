@@ -999,8 +999,49 @@
         </div>
         <!-- End Alerts -->
 
-
+        
     </div>
+
+    <!-- Grid ganadores -->
+        <div class="mb-5">
+            <h2 class="headline_2 mb-2">Grid ganadores</h2>
+
+            <div class="winners-carousel">
+                <div class="winners-gallery">
+                    <div class="card-winners card-base">
+                        <img src="images/ganadores/1.jpg" alt="">
+                    </div>
+                    <div class="card-winners card-base">
+                        <img src="images/ganadores/2.jpg" alt="">
+                    </div>
+                    <div class="card-winners card-base">
+                        <img src="images/ganadores/3.jpg" alt="">
+                    </div>
+                    <div class="card-winners card-base">
+                        <img src="images/ganadores/4.jpg" alt="">
+                    </div>
+                    <div class="card-winners card-base">
+                        <img src="images/ganadores/5.jpg" alt="">
+                    </div>
+                    <div class="card-winners card-base">
+                        <img src="images/ganadores/6.jpg" alt="">
+                    </div>
+                    <div class="card-winners card-base">
+                        <img src="images/ganadores/7.jpg" alt="">
+                    </div>
+                    <div class="card-winners card-base">
+                        <img src="images/ganadores/8.jpg" alt="">
+                    </div>
+                    <div class="card-winners card-base">
+                        <img src="images/ganadores/9.jpg" alt="">
+                    </div>
+                    <div class="card-winners card-base">
+                        <img src="images/ganadores/10.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Ganadores -->
 
     <footer class="site-footer">
 
@@ -1055,6 +1096,15 @@
         </div>
 
     </footer>
+
+    <script>
+    const gallery = document.querySelector('.winners-gallery');
+    [...gallery.children].forEach(card => {
+        const clone = card.cloneNode(true);
+        clone.setAttribute('aria-hidden', 'true');
+        gallery.appendChild(clone);
+    });
+</script>
 
     <!-- Js-files -->
     <script type="module" src="https://unpkg.com/ionicons@8.0.13/dist/ionicons/ionicons.esm.js"></script>

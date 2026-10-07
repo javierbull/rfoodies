@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Carrusel infinito</title>
+  <style>
+    :root {
+      --bg: #f4f4f1;
+      --fg: #1d1d1b;
+      box-sizing: border-box;
+      padding-top: env(safe-area-inset-top, 0px);
+      padding-bottom: env(safe-area-inset-bottom, 0px);
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root:not([data-theme="light"]) {
+        --bg: #141414;
+        --fg: #f0f0ec;
+      }
+    }
+
+    :root[data-theme="dark"] {
+      --bg: #141414;
+      --fg: #f0f0ec;
+    }
+
+    html {
+      scroll-padding-top: env(safe-area-inset-top, 0px);
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--bg);
+      color: var(--fg);
+      font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+    }
+
+    .carousel {
+      width: 100%;
+      overflow: hidden;
+    }
+
+    .track {
+      display: flex;
+      width: max-content;
+      gap: 16px;
+      padding: 8px 0;
+      animation: scroll 30s linear infinite;
+    }
+
+    .track img {
+      height: min(60vh, 360px);
+      width: auto;
+      aspect-ratio: 3/2;
+      border-radius: 16px;
+      object-fit: cover;
+      display: block;
+      flex: none;
+    }
+
+    @keyframes scroll {
+      to {
+        transform: translateX(calc(-50% - 8px));
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .track {
+        animation-duration: 90s;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="carousel">
+    <div class="track" id="track"></div>
+  </div>
+  <script>
+    // Reemplaza estas URLs por tus propias imágenes, por ejemplo: ["foto1.jpg", "foto2.jpg"]
+    // (aquí uso imágenes SVG generadas como ejemplo)
+    const colores = [["#ff7e5f", "#feb47b"], ["#6a11cb", "#2575fc"], ["#11998e", "#38ef7d"], ["#fc4a1a", "#f7b733"], ["#00c6ff", "#0072ff"], ["#ee0979", "#ff6a00"]];
+    const imagenes = colores.map((c, i) => "data:image/svg+xml;utf8," + encodeURIComponent(
+      `<svg xmlns="http://www.w3.org/2000/svg" width="600" height="400"><defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="${c[0]}"/><stop offset="1" stop-color="${c[1]}"/></linearGradient></defs><rect width="600" height="400" fill="url(#g)"/><text x="300" y="235" font-size="140" font-family="sans-serif" fill="white" fill-opacity=".85" text-anchor="middle">${i + 1}</text></svg>`));
+
+    // Se duplica la lista para que el bucle sea continuo y sin saltos
+    const track = document.getElementById("track");
+    [...imagenes, ...imagenes].forEach(src => {
+      const img = document.createElement("img");
+      img.src = src; img.alt = ""; img.draggable = false;
+      track.appendChild(img);
+    });
+  </script>
+</body>
+
+</html>
