@@ -1,0 +1,1138 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <title>UI kit</title>
+    <link rel="icon" href="images/logos/favicon.svg" type="image/x-icon" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <!-- CSS FILES -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <!-- Icons -->
+        <div class="mb-5">
+            <h1 class="display_1">UI Kit</h1>
+            <h2 class="headline_1">Iconos</h2>
+
+            <ion-icon name="heart"></ion-icon> <!--filled-->
+            <ion-icon name="heart-outline"></ion-icon> <!--outline-->
+            <ion-icon name="heart-sharp"></ion-icon> <!--sharp-->
+            <ion-icon name="american-football-outline"></ion-icon>
+            <ion-icon name="beer-outline"></ion-icon>
+        </div>
+        <!-- End icons -->
+
+        <!-- Buttons -->
+        <div class="mb-5">
+            <h2 class="headline_1">Botones</h2>
+
+            <button type="button" class="btn primary-btn">
+                <ion-icon name="arrow-back"></ion-icon>
+                Primary
+                <ion-icon name="arrow-forward"></ion-icon>
+            </button>
+
+            <button type="button" class="btn primary-btn" disabled>
+                <ion-icon name="arrow-back"></ion-icon>
+                Primary
+                <ion-icon name="arrow-forward"></ion-icon>
+            </button>
+
+            <button type="button" class="btn outline-btn">
+                <ion-icon name="arrow-back"></ion-icon>
+                Outline
+                <ion-icon name="arrow-forward"></ion-icon>
+            </button>
+
+            <button type="button" class="btn outline-btn" disabled>
+                <ion-icon name="arrow-back"></ion-icon>
+                Outline
+                <ion-icon name="arrow-forward"></ion-icon>
+            </button>
+            <button type="button" class="btn btn-icon primary-btn-icon">
+                <ion-icon name="arrow-back"></ion-icon>
+            </button>
+            <button type="button" class="btn btn-icon primary-btn-icon" disabled>
+                <ion-icon name="arrow-back"></ion-icon>
+            </button>
+        </div>
+        <!-- End buttons -->
+
+        <!-- Links -->
+        <div class="mb-5">
+            <h2 class="headline_2 mb-2">links</h2>
+
+            <a href="#" class="primary-link">
+                link primary
+            </a>
+
+            <a href="#" class="primary-link disabled-link" disabled>
+                link primary disabled
+            </a>
+        </div>
+        <!-- End links -->
+
+        <!-- Inputs -->
+        <div class="mb-5">
+            <h2 class="headline_2 mb-2">Inputs</h2>
+
+            <form class="form-login">
+                <div class="form-row">
+                    <div class="form-group col">
+                        <label for="user-doc-type" class="form-label">State</label>
+                        <select class="form-select" id="user-doc-type" required="">
+                            <option>DNI</option>
+                            <option>CE</option>
+                            <option>Pasaporte</option>
+                        </select>
+                    </div>
+                    <div class="form-group col">
+                        <label for="user-doc-number" class="form-label">Número</label>
+                        <input type="text" class="form-control" id="user-doc-number" aria-describedby="emailHelp">
+                        <div class="invalid-feedback">
+                            Ingreser un número de documento válido.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="user-password" class="form-label">Contraseña</label>
+                    <div class="password-input-wrapper">
+                        <input type="password" class="form-control" id="user-password">
+                        <ion-icon name="eye-outline" id="toggle-password" class="toggle-password-icon"></ion-icon>
+                    </div>
+                    <div class="invalid-feedback">
+                        Ingrese una contraseña válida.
+                    </div>
+                </div>
+
+
+                <button type="submit" class="btn primary-btn">Iniciar sesión</button>
+
+                <a href="#" class="primary-link" data-bs-toggle="modal" data-bs-target="#modalRecoverPassword">
+                    ¿Olvidaste tu contraseña?
+                </a>
+            </form>
+        </div>
+        <!-- End inputs-->
+
+        <!-- Avatars -->
+        <div class="mb-5">
+            <h2 class="headline_2 mb-2">Avatars</h2>
+
+            <div class="avatar">
+                <span>J</span>
+            </div>
+        </div>
+        <!-- End Avatars -->
+
+        <!-- Dropdown btn -->
+        <div class="mb-5">
+            <h2 class="headline_2 mb-2">Dropdown btn</h2>
+
+            <div class="dropdown">
+                <button type="button" class="btn avatar-btn dropdown-toggle" data-bs-toggle="dropdown"
+                    aria-expanded="false">
+                    J
+                </button>
+
+                <div class="dropdown-menu dropdown-menu-end user-menu">
+                    <!-- Header -->
+                    <div class="user-menu__header">
+                        <p class="user-menu__name">Javier</p>
+                        <p class="user-menu__email">Javierbullreyes@correo.com</p>
+                    </div>
+                    <!-- Cuerpo -->
+                    <div class="user-menu__body">
+                        <ul class="user-menu__list">
+                            <li>
+                                <a class="user-menu__item dropdown-item" href="#profile.html">
+                                    <ion-icon name="person-outline"></ion-icon>
+                                    <span>Mi perfil</span>
+                                    <ion-icon name="chevron-forward-outline"></ion-icon>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="user-menu__item dropdown-item" href="#subscription.html">
+                                    <ion-icon name="card-outline"></ion-icon>
+                                    <span>Mi suscripción</span>
+                                    <ion-icon name="chevron-forward-outline"></ion-icon>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="user-menu__item dropdown-item" href="#receipts.html">
+                                    <ion-icon name="receipt-outline"></ion-icon>
+                                    <span>Mis comprobantes</span>
+                                    <ion-icon name="chevron-forward-outline"></ion-icon>
+                                </a>
+                            </li>
+                        </ul>
+
+                        <div class="user-menu__plan">
+                            <p class="user-menu__plan-label">Plan inactivo</p>
+                            <button type="button" class="btn primary-btn">
+                                Suscribirme
+                            </button>
+                        </div>
+
+                        <div class="user-menu__plan_active">
+                            <p class="user-menu__plan-label">Plan Anual RFOODIES</p>
+                            <p class="user-menu__plan-validity">Vigente hasta el 15/08/2027</p>
+                        </div>
+                    </div>
+                    <!-- Footer -->
+                    <div class="user-menu__footer">
+                        <a class="user-menu__item dropdown-item" href="#login.html">
+                            <ion-icon name="log-out-outline"></ion-icon>
+                            <span>Cerrar sesión</span>
+                            <ion-icon name="chevron-forward-outline"></ion-icon>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <!-- End Dropdown btn -->
+
+        <!-- Tabs -->
+        <div class="mb-5">
+            <h2 class="headline_2 mb-2">Tabs</h2>
+
+            <div class="container py-4">
+                <ul class="nav nav-tabs custom-tabs" id="mainTabs" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link active" data-bs-toggle="tab" data-bs-target="#inicio" type="button"
+                            role="tab">Inicio</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" data-bs-toggle="tab" data-bs-target="#recetas" type="button"
+                            role="tab">Recetas</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" data-bs-toggle="tab" data-bs-target="#masterclasses" type="button"
+                            role="tab">MasterClasses</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" data-bs-toggle="tab" data-bs-target="#beneficios" type="button"
+                            role="tab">Beneficios</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" data-bs-toggle="tab" data-bs-target="#los5" type="button"
+                            role="tab">Los 5 de las semana</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" data-bs-toggle="tab" data-bs-target="#sorteos" type="button"
+                            role="tab">Sorteos</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" data-bs-toggle="tab" data-bs-target="#planes" type="button"
+                            role="tab">Planes</button>
+                    </li>
+                </ul>
+
+                <div class="tab-content pt-4">
+                    <div class="tab-pane fade show active" id="inicio" role="tabpanel">Contenido Inicio</div>
+                    <div class="tab-pane fade" id="recetas" role="tabpanel">Contenido Recetas</div>
+                    <div class="tab-pane fade" id="masterclasses" role="tabpanel">Contenido MasterClasses</div>
+                    <div class="tab-pane fade" id="beneficios" role="tabpanel">Contenido Beneficios</div>
+                    <div class="tab-pane fade" id="los5" role="tabpanel">Contenido Los 5 de la semana</div>
+                    <div class="tab-pane fade" id="sorteos" role="tabpanel">Contenido Sorteos</div>
+                    <div class="tab-pane fade" id="planes" role="tabpanel">Contenido Planes</div>
+                </div>
+            </div>
+
+        </div>
+        <!-- End Tabs -->
+
+        <!-- main menu -->
+        <div class="mb-5">
+            <h2 class="headline_2 mb-2">Main menu</h2>
+
+            <nav aria-label="Navegación principal">
+                <ul class="nav menu-tabs">
+                    <li class="nav-item"><a class="nav-link active" aria-current="page" href="#index">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#recetas">Recetas</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#masterclasses">MasterClasses</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#beneficios">Beneficios</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#los-5-de-la-semana">Los 5 de la semana</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#sorteos">Sorteos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#planes">Planes</a></li>
+                </ul>
+            </nav>
+
+        </div>
+        <!-- End main menu -->
+
+        <!-- Navbar -->
+        <div class="mb-5">
+            <h2 class="headline_2 mb-2">Navbar</h2>
+
+            <nav class="navbar-desktop">
+                <div class="navbar-desktop-top">
+                    <a class="navbar-logo-link" href="#">
+                        <img src="images/logos/logo.svg" alt="RFoodies Logo" class="logo-navbar">
+                    </a>
+
+                    <div class="navbar-desktop-actions">
+                        <button type="button" class="btn primary-btn">
+                            Suscribirme
+                        </button>
+                        <button type="button" class="btn outline-btn">
+                            Iniciar sesión
+                        </button>
+                        <div class="dropdown">
+                            <button type="button" class="btn avatar-btn dropdown-toggle" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                J
+                            </button>
+
+                            <div class="dropdown-menu dropdown-menu-end user-menu">
+                                <!-- Header -->
+                                <div class="user-menu__header">
+                                    <p class="user-menu__name">Javier</p>
+                                    <p class="user-menu__email">Javierbullreyes@correo.com</p>
+                                </div>
+                                <!-- Cuerpo -->
+                                <div class="user-menu__body">
+                                    <ul class="user-menu__list">
+                                        <li>
+                                            <a class="user-menu__item dropdown-item" href="#profile.html">
+                                                <ion-icon name="person-outline"></ion-icon>
+                                                <span>Mi perfil</span>
+                                                <ion-icon name="chevron-forward-outline"></ion-icon>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a class="user-menu__item dropdown-item" href="#subscription.html">
+                                                <ion-icon name="card-outline"></ion-icon>
+                                                <span>Mi suscripción</span>
+                                                <ion-icon name="chevron-forward-outline"></ion-icon>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a class="user-menu__item dropdown-item" href="#receipts.html">
+                                                <ion-icon name="receipt-outline"></ion-icon>
+                                                <span>Mis comprobantes</span>
+                                                <ion-icon name="chevron-forward-outline"></ion-icon>
+                                            </a>
+                                        </li>
+                                    </ul>
+
+                                    <div class="user-menu__plan">
+                                        <p class="user-menu__plan-label">Plan inactivo</p>
+                                        <button type="button" class="btn primary-btn">
+                                            Suscribirme
+                                        </button>
+                                    </div>
+
+                                    <div class="user-menu__plan_active">
+                                        <p class="user-menu__plan-label">Plan Anual RFOODIES</p>
+                                        <p class="user-menu__plan-validity">Vigente hasta el 15/08/2027</p>
+                                    </div>
+                                </div>
+                                <!-- Footer -->
+                                <div class="user-menu__footer">
+                                    <a class="user-menu__item dropdown-item" href="#login.html">
+                                        <ion-icon name="log-out-outline"></ion-icon>
+                                        <span>Cerrar sesión</span>
+                                        <ion-icon name="chevron-forward-outline"></ion-icon>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <ul class="nav menu-tabs">
+                    <li class="nav-item"><a class="nav-link active" aria-current="page" href="#index">Inicio</a>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="#recetas">Recetas</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#masterclasses">MasterClasses</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#beneficios">Beneficios</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#los-5-de-la-semana">Los 5 de la semana</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#sorteos">Sorteos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#planes">Planes</a></li>
+                </ul>
+            </nav>
+        </div>
+        <!-- End Navbar -->
+
+        <!-- Hero carousel -->
+        <div class="mb-5">
+            <h2 class="headline_2 mb-2">Hero carousel</h2>
+
+            <section class="hero-carousel-wrap">
+                <div id="heroCarousel" class="carousel slide hero-carousel" data-bs-ride="carousel"
+                    aria-label="Destacados">
+
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active"
+                            aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1"
+                            aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2"
+                            aria-label="Slide 3"></button>
+                    </div>
+
+                    <div class="carousel-inner">
+                        <!-- Reemplaza cada src por tu imagen (recomendado: 2280 x 1050 px, para pantallas retina) -->
+                        <div class="carousel-item active" data-bs-interval="3000">
+                            <img src="images/bg/carousel-hero-1.jpg" alt="Slide 1">
+                        </div>
+                        <div class="carousel-item" data-bs-interval="3000">
+                            <img src="images/bg/carousel-hero-2.jpg" alt="Slide 2">
+                        </div>
+                        <div class="carousel-item" data-bs-interval="3000">
+                            <img src="images/bg/carousel-hero-3.jpg" alt="Slide 3">
+                        </div>
+                    </div>
+
+                    <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Anterior</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Siguiente</span>
+                    </button>
+
+                </div>
+            </section>
+        </div>
+        <!-- End Hero carousel -->
+
+        <!-- Badge -->
+        <div class="mb-5">
+            <h2 class="headline_2 mb-2">Badge</h2>
+
+            <span class="badge badge-rf">
+                <ion-icon name="star"></ion-icon>
+                Label badge
+            </span>
+        </div>
+        <!-- End Badge -->
+
+        <!-- Cards -->
+        <div class="mb-5">
+            <h2 class="headline_2 mb-2">Cards</h2>
+
+            <div class="card-product">
+                <span class="badge badge-rf">
+                    <ion-icon name="star"></ion-icon>
+                    Solo para suscriptores
+                </span>
+                <img src="images/beneficios/isuhi-bar.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <span class="info-promo">
+                        S/ 29.90
+                    </span>
+                    <h5 class="card-title">Isushi Bar</h5>
+                    <p class="card-description">
+                        Disfruta de 6 Makis + 6 Ebis
+                    </p>
+                </div>
+            </div>
+
+            <div class="card-product">
+                <span class="badge badge-rf">
+                    <ion-icon name="star"></ion-icon>
+                    Solo para suscriptores
+                </span>
+                <img src="images/beneficios/la-bisteca.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <span class="info-promo">
+                        30% Dscto.
+                    </span>
+                    <h5 class="card-title">La Bisteca</h5>
+                    <p class="card-description">
+                        30% de descuento en buffet ilimitado de cenas.
+                    </p>
+                </div>
+            </div>
+
+            <div class="card-product">
+                <span class="badge badge-rf">
+                    <ion-icon name="star"></ion-icon>
+                    Solo para suscriptores
+                </span>
+                <img src="images/restaurantes/cala.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <div class="star-raiting">
+                        <ion-icon name="star"></ion-icon>
+                        4.5
+                    </div>
+                    <h5 class="card-title">Cala Restaurante</h5>
+                    <p class="card-description">
+                        Peruana, Mariscos
+                    </p>
+                </div>
+            </div>
+
+            <div class="card-product">
+                <span class="badge badge-rf">
+                    <ion-icon name="star"></ion-icon>
+                    Solo para suscriptores
+                </span>
+                <img src="images/premios/premio1.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">
+                        Cocina a gas NX52T3310PV, 6 hornillas Silver
+                    </h5>
+                </div>
+            </div>
+
+            <article class="prize-card mb-5">
+                <span class="prize-card__badge" aria-hidden="true">1</span>
+                <div class="prize-card__content">
+                    <h3 class="prize-card__title">Mesa Nómada</h3>
+                    <p class="prize-card__text">
+                        10 ganadores compartirán un escenario fuera de lo común, donde la alta cocina,
+                        la naturaleza y la conversación se conectan en una velada única.
+                    </p>
+                </div>
+            </article>
+
+            <div class="wrap-prize-cards mb-5">
+                <article class="prize-card">
+                    <span class="prize-card__badge" aria-hidden="true">1</span>
+                    <div class="prize-card__content">
+                        <h3 class="prize-card__title">Mesa Nómada</h3>
+                        <p class="prize-card__text">
+                            10 ganadores compartirán un escenario fuera de lo común, donde la alta cocina,
+                            la naturaleza y la conversación se conectan en una velada única.
+                        </p>
+                    </div>
+                </article>
+                <article class="prize-card">
+                    <span class="prize-card__badge" aria-hidden="true">2</span>
+                    <div class="prize-card__content">
+                        <h3 class="prize-card__title">Cenas Privadas</h3>
+                        <ul class="prize-card__list">
+                            <li>Máximo 6 personas</li>
+                            <li>En el restaurante de Rodrigo</li>
+                            <li>Rodrigo es el anfitrión toda la noche</li>
+                        </ul>
+                    </div>
+                </article>
+                <article class="prize-card">
+                    <span class="prize-card__badge" aria-hidden="true">3</span>
+                    <div class="prize-card__content">
+                        <h3 class="prize-card__title">Meet & Cook</h3>
+                        <p class="prize-card__text">
+                            10 ganadores por mes cocinan junto a Rodrigo en su cocina.
+                        </p>
+                    </div>
+                </article>
+                <article class="prize-card">
+                    <span class="prize-card__badge" aria-hidden="true">4</span>
+                    <div class="prize-card__content">
+                        <h3 class="prize-card__title">Huariqueando</h3>
+                        <p class="prize-card__text">
+                            2 suscriptores acompañan a Rodrigo en viajes gastronómicos por el Perú.
+                        </p>
+                    </div>
+                </article>
+            </div>
+
+            <div class="card-monthly-prizes mb-5">
+                <img src="images/premios/chef.png" alt="chef Rodrigo fernandini">
+                <div class="wrap-prize-cards">
+                    <article class="prize-card">
+                        <span class="prize-card__badge" aria-hidden="true">1</span>
+                        <div class="prize-card__content">
+                            <h3 class="prize-card__title">Mesa Nómada</h3>
+                            <p class="prize-card__text">
+                                10 ganadores compartirán un escenario fuera de lo común, donde la alta cocina,
+                                la naturaleza y la conversación se conectan en una velada única.
+                            </p>
+                        </div>
+                    </article>
+                    <article class="prize-card">
+                        <span class="prize-card__badge" aria-hidden="true">2</span>
+                        <div class="prize-card__content">
+                            <h3 class="prize-card__title">Cenas Privadas</h3>
+                            <ul class="prize-card__list">
+                                <li>Máximo 6 personas</li>
+                                <li>En el restaurante de Rodrigo</li>
+                                <li>Rodrigo es el anfitrión toda la noche</li>
+                            </ul>
+                        </div>
+                    </article>
+                    <article class="prize-card">
+                        <span class="prize-card__badge" aria-hidden="true">3</span>
+                        <div class="prize-card__content">
+                            <h3 class="prize-card__title">Meet & Cook</h3>
+                            <p class="prize-card__text">
+                                10 ganadores por mes cocinan junto a Rodrigo en su cocina.
+                            </p>
+                        </div>
+                    </article>
+                    <article class="prize-card">
+                        <span class="prize-card__badge" aria-hidden="true">4</span>
+                        <div class="prize-card__content">
+                            <h3 class="prize-card__title">Huariqueando</h3>
+                            <p class="prize-card__text">
+                                2 suscriptores acompañan a Rodrigo en viajes gastronómicos por el Perú.
+                            </p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+
+            <div class="testimonials__grid">
+
+                <figure class="testimonial-card">
+                    <blockquote class="testimonial-card__quote">
+                        "Las masterclasses de Rodrigo cambiaron por completo cómo preparo la carne y mis salsas.
+                        Mis invitados no lo podían creer."
+                    </blockquote>
+                    <figcaption class="testimonial-card__author">
+                        <img class="testimonial-card__avatar"
+                            src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=96&h=96&q=80"
+                            alt="Roberto M.">
+                        <div>
+                            <p class="testimonial-card__name">Roberto M.</p>
+                            <p class="testimonial-card__meta">Suscrit@ desde hace 6 meses</p>
+                        </div>
+                    </figcaption>
+                </figure>
+
+                <figure class="testimonial-card">
+                    <blockquote class="testimonial-card__quote">
+                        "Las recetas son claras y se explican paso a paso. Por fin me atreví a cocinar para mi
+                        familia cada fin de semana."
+                    </blockquote>
+                    <figcaption class="testimonial-card__author">
+                        <img class="testimonial-card__avatar"
+                            src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=96&h=96&q=80"
+                            alt="Carolina P.">
+                        <div>
+                            <p class="testimonial-card__name">Carolina P.</p>
+                            <p class="testimonial-card__meta">Suscrit@ desde hace 3 meses</p>
+                        </div>
+                    </figcaption>
+                </figure>
+
+                <figure class="testimonial-card">
+                    <blockquote class="testimonial-card__quote">
+                        "Aprendí técnicas de restaurante que jamás imaginé hacer en casa."
+                    </blockquote>
+                    <figcaption class="testimonial-card__author">
+                        <img class="testimonial-card__avatar"
+                            src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=96&h=96&q=80"
+                            alt="Andrés V.">
+                        <div>
+                            <p class="testimonial-card__name">Andrés V.</p>
+                            <p class="testimonial-card__meta">Suscrit@ desde hace 1 año</p>
+                        </div>
+                    </figcaption>
+                </figure>
+            </div>
+
+            <figure class="social-proof-card">
+                <div class="social-proof-card__content">
+                    <h3 class="social-proof-card__title">+ 10,000</h3>
+                    <p class="social-proof-card__text">
+                        Suscriptores activos en la comunidad
+                    </p>
+                </div>
+            </figure>
+
+            <div class="social-proof__grid mb-5">
+                <figure class="social-proof-card">
+                    <div class="social-proof-card__content">
+                        <h3 class="social-proof-card__title">+ 10,000</h3>
+                        <p class="social-proof-card__text">
+                            Suscriptores activos en la comunidad
+                        </p>
+                    </div>
+                </figure>
+
+                <figure class="social-proof-card">
+                    <div class="social-proof-card__content">
+                        <h3 class="social-proof-card__title">+ 150</h3>
+                        <p class="social-proof-card__text">
+                            Recetas exclusivas y Masterclasses
+                        </p>
+                    </div>
+                </figure>
+
+                <figure class="social-proof-card">
+                    <div class="social-proof-card__content">
+                        <h3 class="social-proof-card__title">4.9/5</h3>
+                        <p class="social-proof-card__text">
+                            Calificación promedio de los suscriptores
+                        </p>
+                    </div>
+                </figure>
+            </div>
+
+            <div class="social-proof__banner">
+                <div class="social-proof__grid">
+                    <figure class="social-proof-card">
+                        <div class="social-proof-card__content">
+                            <h3 class="social-proof-card__title">+ 10,000</h3>
+                            <p class="social-proof-card__text">
+                                Suscriptores activos en la comunidad
+                            </p>
+                        </div>
+                    </figure>
+
+                    <figure class="social-proof-card">
+                        <div class="social-proof-card__content">
+                            <h3 class="social-proof-card__title">+ 150</h3>
+                            <p class="social-proof-card__text">
+                                Recetas exclusivas y Masterclasses
+                            </p>
+                        </div>
+                    </figure>
+
+                    <figure class="social-proof-card">
+                        <div class="social-proof-card__content">
+                            <h3 class="social-proof-card__title">4.9/5</h3>
+                            <p class="social-proof-card__text">
+                                Calificación promedio de los suscriptores
+                            </p>
+                        </div>
+                    </figure>
+                </div>
+
+                <div class="testimonials__grid">
+                    <figure class="testimonial-card">
+                        <blockquote class="testimonial-card__quote">
+                            "Las masterclasses de Rodrigo cambiaron por completo cómo preparo la carne y mis salsas.
+                            Mis invitados no lo podían creer."
+                        </blockquote>
+                        <figcaption class="testimonial-card__author">
+                            <img class="testimonial-card__avatar"
+                                src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=96&h=96&q=80"
+                                alt="Roberto M.">
+                            <div>
+                                <p class="testimonial-card__name">Roberto M.</p>
+                                <p class="testimonial-card__meta">Suscrit@ desde hace 6 meses</p>
+                            </div>
+                        </figcaption>
+                    </figure>
+
+                    <figure class="testimonial-card">
+                        <blockquote class="testimonial-card__quote">
+                            "Las recetas son claras y se explican paso a paso. Por fin me atreví a cocinar para mi
+                            familia cada fin de semana."
+                        </blockquote>
+                        <figcaption class="testimonial-card__author">
+                            <img class="testimonial-card__avatar"
+                                src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=96&h=96&q=80"
+                                alt="Carolina P.">
+                            <div>
+                                <p class="testimonial-card__name">Carolina P.</p>
+                                <p class="testimonial-card__meta">Suscrit@ desde hace 3 meses</p>
+                            </div>
+                        </figcaption>
+                    </figure>
+
+                    <figure class="testimonial-card">
+                        <blockquote class="testimonial-card__quote">
+                            "Aprendí técnicas de restaurante que jamás imaginé hacer en casa."
+                        </blockquote>
+                        <figcaption class="testimonial-card__author">
+                            <img class="testimonial-card__avatar"
+                                src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=96&h=96&q=80"
+                                alt="Andrés V.">
+                            <div>
+                                <p class="testimonial-card__name">Andrés V.</p>
+                                <p class="testimonial-card__meta">Suscrit@ desde hace 1 año</p>
+                            </div>
+                        </figcaption>
+                    </figure>
+                </div>
+            </div>
+        </div>
+
+        <div class="plans__grid mb-5">
+
+            <!-- Plan mensual: 4 beneficios -->
+            <article class="plan-card">
+                <header class="plan-card__header">
+                    <h3 class="plan-card__name">Plan mensual</h3>
+                    <p class="plan-card__price">S/ 8.00</p>
+                </header>
+                <ul class="plan-card__body">
+                    <li class="plan-card__benefit">Acceso a todas las Recetas</li>
+                    <li class="plan-card__benefit">Acceso a Masterclasses</li>
+                    <li class="plan-card__benefit">Cupones de descuento en partners</li>
+                    <li class="plan-card__benefit">Participación en sorteos del mes</li>
+                </ul>
+                <div class="plan-card__footer">
+                    <button type="button" class="btn primary-btn">
+                        ¡Suscribirme!
+                    </button>
+                </div>
+            </article>
+
+            <!-- Plan trimestral: 5 beneficios -->
+            <article class="plan-card">
+                <header class="plan-card__header">
+                    <h3 class="plan-card__name">Plan trimestral</h3>
+                    <p class="plan-card__price">S/ 21.00</p>
+                </header>
+                <ul class="plan-card__body">
+                    <span class="badge badge-rf">
+                        Es como pagar S/ 7.00 al mes
+                    </span>
+                    <li class="plan-card__benefit">Acceso a todas las Recetas</li>
+                    <li class="plan-card__benefit">Acceso a Masterclasses</li>
+                    <li class="plan-card__benefit">Cupones de descuento en partners</li>
+                    <li class="plan-card__benefit">Doble ticket para sorteos mensuales</li>
+                    <li class="plan-card__benefit">✓ Acceso prioritario a eventos</li>
+                </ul>
+                <div class="plan-card__footer">
+                    <button type="button" class="btn primary-btn">
+                        ¡Suscribirme!
+                    </button>
+                </div>
+            </article>
+
+            <!-- Plan anual: 6 beneficios -->
+            <article class="plan-card">
+                <header class="plan-card__header">
+                    <h3 class="plan-card__name">Plan anual</h3>
+                    <p class="plan-card__price">S/ 60.00</p>
+                </header>
+                <ul class="plan-card__body">
+                    <span class="badge badge-rf">
+                        Es como pagar S/ 5.00 al mes
+                    </span>
+                    <li class="plan-card__benefit">Acceso a todas las Recetas</li>
+                    <li class="plan-card__benefit">Acceso a Masterclasses</li>
+                    <li class="plan-card__benefit">Cupones de descuento en partners</li>
+                    <li class="plan-card__benefit">Doble ticket para sorteos mensuales</li>
+                    <li class="plan-card__benefit">Acceso prioritario a eventos</li>
+                    <li class="plan-card__benefit">Recetario digital en PDF exclusivo</li>
+                    <li class="plan-card__benefit">Soporte directo para consultas gastronómicas</li>
+                    <li class="plan-card__benefit">MasterClass en vivo</li>
+                </ul>
+                <div class="plan-card__footer">
+                    <button type="button" class="btn primary-btn">
+                        ¡Suscribirme!
+                    </button>
+                </div>
+            </article>
+
+        </div>
+        <!-- End Cards -->
+
+        <!-- Carousels -->
+        <div class="mb-5">
+            <h2 class="headline_2 mb-2">Carousels</h2>
+
+            <section class="carousel-benefits" aria-roledescription="carrusel"
+                aria-label="Beneficios para suscriptores">
+
+                <button class="carousel-btn prev" type="button" aria-label="Anterior">
+                    <svg class="ionicon" viewBox="0 0 512 512" aria-hidden="true">
+                        <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                            stroke-width="48" d="M328 112L184 256l144 144" />
+                    </svg>
+                </button>
+
+                <div class="carousel-track" tabindex="0">
+
+                    <div class="card-product">
+                        <span class="badge badge-rf">
+                            <ion-icon name="star"></ion-icon>
+                            Solo para suscriptores
+                        </span>
+                        <img src="images/beneficios/isuhi-bar.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <span class="info-promo">
+                                S/ 29.90
+                            </span>
+                            <h5 class="card-title">Isushi Bar</h5>
+                            <p class="card-description">
+                                Disfruta de 6 Makis + 6 Ebis
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="card-product">
+                        <span class="badge badge-rf">
+                            <ion-icon name="star"></ion-icon>
+                            Solo para suscriptores
+                        </span>
+                        <img src="images/beneficios/la-bisteca.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <span class="info-promo">
+                                30% Dscto.
+                            </span>
+                            <h5 class="card-title">La Bisteca</h5>
+                            <p class="card-description">
+                                30% de descuento en buffet ilimitado de cenas.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="card-product">
+                        <span class="badge badge-rf">
+                            <ion-icon name="star"></ion-icon>
+                            Solo para suscriptores
+                        </span>
+                        <img src="images/restaurantes/cala.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <div class="star-raiting">
+                                <ion-icon name="star"></ion-icon>
+                                4.5
+                            </div>
+                            <h5 class="card-title">Cala Restaurante</h5>
+                            <p class="card-description">
+                                Peruana, Mariscos
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="card-product">
+                        <span class="badge badge-rf">
+                            <ion-icon name="star"></ion-icon>
+                            Solo para suscriptores
+                        </span>
+                        <img src="images/premios/premio1.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">
+                                Cocina a gas NX52T3310PV, 6 hornillas Silver
+                            </h5>
+                        </div>
+                    </div>
+                </div>
+
+                <button class="carousel-btn next" type="button" aria-label="Siguiente">
+                    <svg class="ionicon" viewBox="0 0 512 512" aria-hidden="true">
+                        <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                            stroke-width="48" d="M184 112l144 144-144 144" />
+                    </svg>
+                </button>
+
+            </section>
+        </div>
+        <!-- End Carousels -->
+
+        <!-- Headers -->
+        <div class="mb-5">
+            <h2 class="headline_2 mb-2">Headers</h2>
+
+            <div class="header-section">
+                <h6 class="header-section__subtitle">
+                    SUBTITLE SECTION
+                </h6>
+                <h4 class="header-section__title">Section title</h4>
+            </div>
+
+            <div class="header-section text-center">
+                <h6 class="header-section__subtitle">
+                    SUBTITLE SECTION
+                </h6>
+                <h4 class="header-section__title">Section title</h4>
+            </div>
+
+            <div class="header-section header-section__dark text-center">
+                <h6 class="header-section__subtitle">
+                    SUBTITLE SECTION
+                </h6>
+                <h4 class="header-section__title">Section title</h4>
+            </div>
+        </div>
+        <!-- End Headers -->
+
+        <!-- Alerts -->
+        <div class="mb-5">
+            <h2 class="headline_2 mb-2">Alerts</h2>
+
+            <div class="notice-list">
+
+                <!-- INFO -->
+                <div class="notice notice--info" role="status">
+                    <ion-icon class="notice__icon" name="information-circle" aria-hidden="true"></ion-icon>
+                    <div class="notice__content">
+                        <p class="notice__title">Message title</p>
+                        <p class="notice__text">Description message</p>
+                    </div>
+                </div>
+
+                <!-- WARNING -->
+                <div class="notice notice--warning" role="alert">
+                    <ion-icon class="notice__icon" name="warning" aria-hidden="true"></ion-icon>
+                    <div class="notice__content">
+                        <p class="notice__title">Message title</p>
+                        <p class="notice__text">Description message</p>
+                    </div>
+                </div>
+
+                <!-- SUCCESS -->
+                <div class="notice notice--success" role="status">
+                    <ion-icon class="notice__icon" name="checkmark-circle" aria-hidden="true"></ion-icon>
+                    <div class="notice__content">
+                        <p class="notice__title">Message title</p>
+                        <p class="notice__text">Description message</p>
+                    </div>
+                </div>
+
+                <!-- ERROR -->
+                <div class="notice notice--error" role="alert">
+                    <ion-icon class="notice__icon" name="close-circle" aria-hidden="true"></ion-icon>
+                    <div class="notice__content">
+                        <p class="notice__title">Message title</p>
+                        <p class="notice__text">Description message</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <!-- End Alerts -->
+
+
+    </div>
+
+    <!-- Grid ganadores -->
+    <div class="mb-5">
+        <h2 class="headline_2 mb-2">Grid ganadores</h2>
+
+        <div class="winners-carousel">
+            <div class="winners-gallery">
+                <div class="card-winners card-base">
+                    <img src="images/ganadores/1.jpg" alt="">
+                </div>
+                <div class="card-winners card-base">
+                    <img src="images/ganadores/2.jpg" alt="">
+                </div>
+                <div class="card-winners card-base">
+                    <img src="images/ganadores/3.jpg" alt="">
+                </div>
+                <div class="card-winners card-base">
+                    <img src="images/ganadores/4.jpg" alt="">
+                </div>
+                <div class="card-winners card-base">
+                    <img src="images/ganadores/5.jpg" alt="">
+                </div>
+                <div class="card-winners card-base">
+                    <img src="images/ganadores/6.jpg" alt="">
+                </div>
+                <div class="card-winners card-base">
+                    <img src="images/ganadores/7.jpg" alt="">
+                </div>
+                <div class="card-winners card-base">
+                    <img src="images/ganadores/8.jpg" alt="">
+                </div>
+                <div class="card-winners card-base">
+                    <img src="images/ganadores/9.jpg" alt="">
+                </div>
+                <div class="card-winners card-base">
+                    <img src="images/ganadores/10.jpg" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Ganadores -->
+
+    <!-- Receta destacada -->
+    <section class="leccion container mb-5">
+        <h2 class="headline_2 mb-2">Videos</h2>
+
+        <!-- Video 1: pega el link de YouTube en data-video-url (acepta watch?v=, youtu.be, embed, shorts, live) -->
+        <div class="video" data-video-url="https://www.youtube.com/watch?v=eHxLWNQNmv8"
+            data-video-title="Lección 3 - Ceviche Norteño">
+            <img class="video__portada" src="videos/portadaMasterClassDestacada.jpg"
+                alt="Ceviche norteño servido en un plato de cerámica con choclo, lechuga y crema de ají">
+
+            <button class="video__boton" type="button" aria-label="Reproducir video: Lección 3 - Ceviche Norteño">
+                <ion-icon name="play" aria-hidden="true"></ion-icon>
+            </button>
+        </div>
+
+        <!-- Video 2: cambia el link, el título, la portada y el alt -->
+        <div class="video" data-video-url="https://www.youtube.com/shorts/liSxIUEJtUs"
+            data-video-title="Lección 4 - Título del video">
+            <img class="video__portada" src="videos/portadaMasterClass2.jpg" alt="Descripción de la portada">
+
+            <button class="video__boton" type="button" aria-label="Reproducir video: Lección 4 - Título del video">
+                <ion-icon name="play" aria-hidden="true"></ion-icon>
+            </button>
+        </div>
+
+        <!-- Video 3: copia y pega un bloque <div class="video"> las veces que necesites -->
+    </section>
+    <!-- End receta destacada -->
+
+    <footer class="site-footer">
+
+        <div class="site-footer__main container">
+
+            <!-- Marca -->
+            <div class="site-footer__col">
+                <a class="site-footer__logo" href="#" aria-label="RFoodies, inicio">
+                    <img src="images/logos/logo.svg" alt="">
+                </a>
+                <p class="site-footer__text">
+                    La plataforma gastronómica donde la cocina de alto nivel se vuelve cercana y accesible
+                    a través de la guía del chef Rodrigo Fernandini.
+                </p>
+            </div>
+
+            <!-- Contáctanos -->
+            <div class="site-footer__col">
+                <h2 class="site-footer__title">Contáctanos</h2>
+                <p class="site-footer__text">Escríbenos a: <br> soporte@rfoodies.com</p>
+                <p class="site-footer__text">Horario de atención: <br> L-V de 9am a 6pm | Sáb. de 9am a 2 pm</p>
+                <a href="#" target="_blank" class="primary-link">Preguntas frecuentes</a>
+            </div>
+
+            <!-- Legales -->
+            <div class="site-footer__col">
+                <h2 class="site-footer__title">Legales</h2>
+                <ul class="site-footer__links">
+                    <li><a href="#" target="_blank" class="primary-link">Términos y condiciones</a></li>
+                    <li><a href="#" target="_blank" class="primary-link">Politicas de privacidad</a></li>
+                    <li><a href="#" target="_blank" class="primary-link">Libro de reclamaciones</a></li>
+                </ul>
+            </div>
+
+            <!-- Redes sociales -->
+            <div class="site-footer__col">
+                <h2 class="site-footer__title">Redes sociales</h2>
+                <ul class="site-footer__social">
+                    <li><a href="https://www.tiktok.com/@chefrodrigofernandini" target="_blank"
+                            aria-label="TikTok"><ion-icon name="logo-tiktok"></ion-icon></a></li>
+                    <li><a href="https://www.instagram.com/rodrigofernandini/?hl=es-la" target="_blank"
+                            aria-label="Instagram"><ion-icon name="logo-instagram"></ion-icon></a></li>
+                    <li><a href="https://www.youtube.com/@rodrigofernandini" target="_blank"
+                            aria-label="YouTube"><ion-icon name="logo-youtube"></ion-icon></a></li>
+                </ul>
+            </div>
+
+        </div>
+
+        <div class="site-footer__bottom">
+            <p class="site-footer__copy">© 2026 chefrodrigofernandini. All rights reserved.</p>
+        </div>
+
+    </footer>
+
+    <!-- Js-files -->
+    <script type="module" src="https://unpkg.com/ionicons@8.0.13/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@8.0.13/dist/ionicons/ionicons.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
