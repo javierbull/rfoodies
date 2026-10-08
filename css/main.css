@@ -1651,8 +1651,10 @@ body {
 .winners-gallery {
     display: flex;
     width: max-content;
-    overflow: visible;      /* anula el overflow-x que causa el scroll */
-    gap: 0;                 /* evita que un gap de tu CSS rompa el loop */
+    overflow: visible;
+    /* anula el overflow-x que causa el scroll */
+    gap: 0;
+    /* evita que un gap de tu CSS rompa el loop */
     animation: scroll-winners 50s linear infinite;
 }
 
@@ -1663,7 +1665,8 @@ body {
 .card-winners {
     flex: 0 0 auto;
     width: auto;
-    height: 360px;          /* mismo alto para todas */
+    height: 360px;
+    /* mismo alto para todas */
     margin-right: 1.25rem;
     overflow: hidden;
     border-radius: 1rem;
@@ -1673,18 +1676,155 @@ body {
     display: block;
     width: auto;
     height: 100%;
-    object-fit: cover;      /* recorta para llenar sin deformar */
+    object-fit: cover;
+    /* recorta para llenar sin deformar */
     object-position: center;
 }
 
 @keyframes scroll-winners {
-    from { transform: translateX(0); }
-    to   { transform: translateX(-50%); }
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
 }
 
 @media (prefers-reduced-motion: reduce) {
-    .winners-gallery { animation: none; }
+    .winners-gallery {
+        animation: none;
+    }
 }
+
 /* End Winners Gallery */
+
+/* Video receta */
+:root {
+    --fondo: #f3f2e0;
+    --texto: #1a1a1a;
+    --texto-suave: #4a4a42;
+    --radio: 24px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 32px 16px;
+    background: var(--fondo);
+    font-family: "Poppins", system-ui, -apple-system, "Segoe UI", sans-serif;
+    color: var(--texto);
+}
+
+.leccion {
+    max-width: 1050px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* ---------- Contenedor del video ---------- */
+.video {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 6.2;
+    /* proporción panorámica como en tu referencia */
+    border-radius: var(--radio);
+    overflow: hidden;
+    background: #000;
+    cursor: pointer;
+}
+
+.video__portada {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.video__boton {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 64px;
+    height: 64px;
+    transform: translate(-50%, -50%);
+    border: 0;
+    border-radius: 50%;
+    background: #fbf7e8;
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+    transition: transform .2s ease, background .2s ease;
+}
+
+.video__boton ion-icon {
+    font-size: 28px;
+    margin-left: 3px;
+    /* centra ópticamente el triángulo */
+    color: #1a1a1a;
+}
+
+.video:hover .video__boton {
+    transform: translate(-50%, -50%) scale(1.1);
+}
+
+.video__boton:focus-visible {
+    outline: 3px solid #fff;
+    outline-offset: 3px;
+}
+
+/* Al reproducir: el iframe de YouTube ocupa todo el espacio */
+.video iframe {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+.video.reproduciendo {
+    cursor: default;
+    aspect-ratio: 16 / 9;
+}
+
+/* ---------- Texto ---------- */
+.leccion__titulo {
+    margin: 28px 0 12px;
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+.leccion__texto {
+    margin: 0 auto;
+    max-width: 62ch;
+    font-size: .9rem;
+    line-height: 1.55;
+    color: var(--texto-suave);
+}
+
+@media (max-width: 640px) {
+    .video {
+        aspect-ratio: 16 / 10;
+        border-radius: 18px;
+    }
+
+    .video__boton {
+        width: 56px;
+        height: 56px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .video__boton {
+        transition: none;
+    }
+}
+
+/* End video receta */
 
 /* END COMPONENTS */

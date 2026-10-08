@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
     <title>UI kit</title>
     <link rel="icon" href="images/logos/favicon.svg" type="image/x-icon" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -999,49 +1000,74 @@
         </div>
         <!-- End Alerts -->
 
-        
+
     </div>
 
     <!-- Grid ganadores -->
-        <div class="mb-5">
-            <h2 class="headline_2 mb-2">Grid ganadores</h2>
+    <div class="mb-5">
+        <h2 class="headline_2 mb-2">Grid ganadores</h2>
 
-            <div class="winners-carousel">
-                <div class="winners-gallery">
-                    <div class="card-winners card-base">
-                        <img src="images/ganadores/1.jpg" alt="">
-                    </div>
-                    <div class="card-winners card-base">
-                        <img src="images/ganadores/2.jpg" alt="">
-                    </div>
-                    <div class="card-winners card-base">
-                        <img src="images/ganadores/3.jpg" alt="">
-                    </div>
-                    <div class="card-winners card-base">
-                        <img src="images/ganadores/4.jpg" alt="">
-                    </div>
-                    <div class="card-winners card-base">
-                        <img src="images/ganadores/5.jpg" alt="">
-                    </div>
-                    <div class="card-winners card-base">
-                        <img src="images/ganadores/6.jpg" alt="">
-                    </div>
-                    <div class="card-winners card-base">
-                        <img src="images/ganadores/7.jpg" alt="">
-                    </div>
-                    <div class="card-winners card-base">
-                        <img src="images/ganadores/8.jpg" alt="">
-                    </div>
-                    <div class="card-winners card-base">
-                        <img src="images/ganadores/9.jpg" alt="">
-                    </div>
-                    <div class="card-winners card-base">
-                        <img src="images/ganadores/10.jpg" alt="">
-                    </div>
+        <div class="winners-carousel">
+            <div class="winners-gallery">
+                <div class="card-winners card-base">
+                    <img src="images/ganadores/1.jpg" alt="">
+                </div>
+                <div class="card-winners card-base">
+                    <img src="images/ganadores/2.jpg" alt="">
+                </div>
+                <div class="card-winners card-base">
+                    <img src="images/ganadores/3.jpg" alt="">
+                </div>
+                <div class="card-winners card-base">
+                    <img src="images/ganadores/4.jpg" alt="">
+                </div>
+                <div class="card-winners card-base">
+                    <img src="images/ganadores/5.jpg" alt="">
+                </div>
+                <div class="card-winners card-base">
+                    <img src="images/ganadores/6.jpg" alt="">
+                </div>
+                <div class="card-winners card-base">
+                    <img src="images/ganadores/7.jpg" alt="">
+                </div>
+                <div class="card-winners card-base">
+                    <img src="images/ganadores/8.jpg" alt="">
+                </div>
+                <div class="card-winners card-base">
+                    <img src="images/ganadores/9.jpg" alt="">
+                </div>
+                <div class="card-winners card-base">
+                    <img src="images/ganadores/10.jpg" alt="">
                 </div>
             </div>
         </div>
-        <!-- End Ganadores -->
+    </div>
+    <!-- End Ganadores -->
+
+    <!-- Receta destacada -->
+    <section class="leccion container mb-5">
+        <h2 class="headline_2 mb-2">Alerts</h2>
+
+        <!-- Cambia data-video-id si quieres usar otro video de YouTube -->
+        <div class="video" id="video" data-video-id="eHxLWNQNmv8">
+            <img class="video__portada" src="videos/portadaMasterClassDestacada.jpg"
+                alt="Ceviche norteño servido en un plato de cerámica con choclo, lechuga y crema de ají">
+
+            <button class="video__boton" type="button" aria-label="Reproducir video de la Lección 3">
+                <ion-icon name="play" aria-hidden="true"></ion-icon>
+            </button>
+        </div>
+
+        <h2 class="leccion__titulo">LECCIÓN 3 - Ceviche Norteño</h2>
+
+        <p class="leccion__texto">
+            Dominarás el balance perfecto entre el limón sutil, el ají mochero y el toque exacto de chicha de jora
+            para crear un ceviche norteño memorable. Aprenderás las técnicas de corte y sazón para lograr una leche
+            de tigre intensa, fresca y con la identidad única de la costa norte peruana.
+        </p>
+
+    </section>
+    <!-- End receta destacada -->
 
     <footer class="site-footer">
 
@@ -1096,15 +1122,6 @@
         </div>
 
     </footer>
-
-    <script>
-    const gallery = document.querySelector('.winners-gallery');
-    [...gallery.children].forEach(card => {
-        const clone = card.cloneNode(true);
-        clone.setAttribute('aria-hidden', 'true');
-        gallery.appendChild(clone);
-    });
-</script>
 
     <!-- Js-files -->
     <script type="module" src="https://unpkg.com/ionicons@8.0.13/dist/ionicons/ionicons.esm.js"></script>
