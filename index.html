@@ -1048,15 +1048,28 @@
     <section class="leccion container mb-5">
         <h2 class="headline_2 mb-2">Alerts</h2>
 
-        <!-- Cambia data-video-id si quieres usar otro video de YouTube -->
-        <div class="video" id="video" data-video-id="eHxLWNQNmv8">
+        <!-- Video 1: pega el link de YouTube en data-video-url (acepta watch?v=, youtu.be, embed, shorts, live) -->
+        <div class="video" data-video-url="https://www.youtube.com/watch?v=eHxLWNQNmv8"
+            data-video-title="Lección 3 - Ceviche Norteño">
             <img class="video__portada" src="videos/portadaMasterClassDestacada.jpg"
                 alt="Ceviche norteño servido en un plato de cerámica con choclo, lechuga y crema de ají">
 
-            <button class="video__boton" type="button" aria-label="Reproducir video de la Lección 3">
+            <button class="video__boton" type="button" aria-label="Reproducir video: Lección 3 - Ceviche Norteño">
                 <ion-icon name="play" aria-hidden="true"></ion-icon>
             </button>
         </div>
+
+        <!-- Video 2: cambia el link, el título, la portada y el alt -->
+        <div class="video" data-video-url="https://www.youtube.com/shorts/liSxIUEJtUs"
+            data-video-title="Lección 4 - Título del video">
+            <img class="video__portada" src="videos/portada2.jpg" alt="Descripción de la portada">
+
+            <button class="video__boton" type="button" aria-label="Reproducir video: Lección 4 - Título del video">
+                <ion-icon name="play" aria-hidden="true"></ion-icon>
+            </button>
+        </div>
+
+        <!-- Video 3: copia y pega un bloque <div class="video"> las veces que necesites -->
     </section>
     <!-- End receta destacada -->
 
