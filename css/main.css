@@ -1717,9 +1717,9 @@ body {
     width: 100%;
     aspect-ratio: 16 / 6.2;
     /* proporción panorámica como en tu referencia */
-    border-radius: var(--radio);
+    border-radius: 1.5rem;
     overflow: hidden;
-    background: #000;
+    background: var(--bg-fill-black-secondary);
     cursor: pointer;
 }
 
@@ -1741,7 +1741,7 @@ body {
     transform: translate(-50%, -50%);
     border: 0;
     border-radius: 50%;
-    background: #fbf7e8;
+    background: var(--bg-fill-secondary);
     display: grid;
     place-items: center;
     cursor: pointer;
@@ -1752,7 +1752,7 @@ body {
     font-size: 28px;
     margin-left: 3px;
     /* centra ópticamente el triángulo */
-    color: #1a1a1a;
+    color: var(--bg-fill-black);
 }
 
 .video:hover .video__boton {
@@ -1760,7 +1760,7 @@ body {
 }
 
 .video__boton:focus-visible {
-    outline: 3px solid #fff;
+    outline: 3px solid var(--bg-fill-secondary);
     outline-offset: 3px;
 }
 
