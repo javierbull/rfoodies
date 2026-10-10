@@ -1839,6 +1839,28 @@ header {
     border-radius: 1.5rem;
     display: block;
 }
-
 /* End Section About */
+
+/* featured-recipe */
+.featured-recipe__wrap-content {
+    display: flex;
+    gap: 2rem;
+}
+
+.featured-recipe__content .badge {
+    margin-bottom: .5rem;
+}
+
+.featured-recipe__content .notice {
+    margin-bottom: 1rem;
+}
+
+.featured-recipe__img {
+    height: 25rem;
+    object-fit: cover;
+    border-radius: 1.5rem;
+    display: block;
+    aspect-ratio: 4/3;
+}
+/* End featured-recipe */
 /* END INDEX PAGE */
