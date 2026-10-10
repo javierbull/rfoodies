@@ -1657,6 +1657,7 @@ body {
 .winners-carousel {
     overflow: hidden;
     width: 100%;
+    margin-bottom: 1rem;
 }
 
 .winners-gallery {
