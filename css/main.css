@@ -1353,7 +1353,7 @@ body {
 /* End cards */
 
 /* Headers */
-.header-section {
+.header-section, .header-section__dark {
     /* background-color: pink; */
     margin-bottom: 1.5rem;
 }
@@ -1823,7 +1823,10 @@ header {
 
 .section-bg {
     background-color: var(--bg-surface-secondary);
-    padding: 2.5rem 0;
+}
+
+.section-dark {
+    background-color: var(--bg-fill-black);
 }
 
 /* End section */
