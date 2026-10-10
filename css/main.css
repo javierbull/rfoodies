@@ -1545,7 +1545,7 @@ body {
 /* Carousels */
 
 /* ---------- Carousel ---------- */
-.carousel-benefits {
+.carousel-cards {
     position: relative;
     margin: 0 auto;
 }
@@ -1819,7 +1819,7 @@ header {
     padding: 2.5rem 0;
 }
 
-.wrap-section-secondary {
+.section-bg {
     background-color: var(--bg-surface-secondary);
     padding: 2.5rem 0;
 }

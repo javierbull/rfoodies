@@ -13,7 +13,7 @@ $(document).ready(function () {
     // End mostrar y ocultar contraseña
 
     // Carousel de beneficios
-    $('.carousel-benefits').each(function () {
+    $('.carousel-cards').each(function () {
         const $carousel = $(this);
         const $track = $carousel.find('.carousel-track');
         const $prev = $carousel.find('.prev');
