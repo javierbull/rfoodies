@@ -1841,7 +1841,7 @@ header {
 }
 /* End Section About */
 
-/* featured-recipe */
+/* receta destacada */
 .featured-recipe__wrap-content {
     display: flex;
     gap: 2rem;
@@ -1862,7 +1862,7 @@ header {
     display: block;
     aspect-ratio: 4/3;
 }
-/* End featured-recipe */
+/* End receta destacada */
 
 /* MasterClass section */
 .featured-masterClass__wrap-content {
@@ -1875,4 +1875,6 @@ header {
     text-align: center;
 }
 /* End masterClass section */
+
+
 /* END INDEX PAGE */
