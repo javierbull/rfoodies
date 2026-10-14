@@ -564,10 +564,6 @@ body {
 /* End Tabs */
 
 /* Main menu */
-:root {
-    --menu-accent: #42ca4b;
-    --menu-indicator: 5px;
-}
 
 /* ---- Menú ---- */
 .menu-tabs {
@@ -811,13 +807,17 @@ body {
 
 
 /* Navbar */
+header {
+   height: 5.75rem;
+}
 .navbar-desktop {
     background-color: var(--bg-surface-primary);
-    padding: 0 2.5rem;
+    padding: 0;
     box-shadow: var(--shadow-primary);
     position: fixed;
     width: 100%;
     z-index: 5;
+    height: 5.75rem;
 }
 
 .logo-navbar {
@@ -840,6 +840,27 @@ body {
 .navbar-desktop .menu-tabs {
     justify-content: center;
     flex-grow: 1;
+}
+
+.navbar-mobile {
+    background-color: var(--bg-surface-primary);
+    padding: 0 1rem;
+    box-shadow: var(--shadow-primary);
+    position: fixed;
+    width: 100%;
+    z-index: 5;
+    height: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar-mobile .logo-navbar {
+    height: 1rem;
+}
+
+.d-none {
+    display: none;
 }
 
 /* End Navbar */
@@ -1813,9 +1834,7 @@ body {
 /* END COMPONENTS */
 
 /* INDEX PAGE*/
-header {
-    height: 5.75rem;
-}
+
 /* Section */
 .wrap-section {
     padding: 2.5rem 0;

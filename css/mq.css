@@ -1,6 +1,13 @@
 /* Tablet */
-@media (max-width: 845px) {
-
+@media (max-width: 1200px) {
+    /* Index */
+    header {
+        height: 4rem;
+    }
+    .navbar-desktop {
+        display: none;
+    }
+    /* End index */
     
 }
 /* End tablet */
@@ -9,5 +16,4 @@
 @media (max-width: 480px) {
     
 }
-
 /* End mobile*/
