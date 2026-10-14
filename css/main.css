@@ -812,7 +812,7 @@ header {
 }
 .navbar-desktop {
     background-color: var(--bg-surface-primary);
-    padding: 0;
+    padding: 0 2rem;
     box-shadow: var(--shadow-primary);
     position: fixed;
     width: 100%;
@@ -853,6 +853,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    display: none;
 }
 
 .navbar-mobile .logo-navbar {
