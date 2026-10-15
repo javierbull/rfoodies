@@ -867,10 +867,6 @@ header {
 /* End Navbar */
 
 /* Carousel hero */
-:root {
-    --hero-radius: 24px;
-    --hero-arrow-size: 40px;
-}
 
 /* Espacio lateral para que las flechas (que sobresalen la mitad) no se corten */
 .hero-carousel-wrap {
@@ -919,11 +915,11 @@ header {
 }
 
 .hero-carousel .carousel-control-prev {
-    left: calc(var(--hero-arrow-size) / -2);
+    left: -20px;
 }
 
 .hero-carousel .carousel-control-next {
-    right: calc(var(--hero-arrow-size) / -2);
+    right: -20px;
 }
 
 .hero-carousel .carousel-control-prev:hover,
