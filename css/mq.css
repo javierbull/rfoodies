@@ -22,6 +22,13 @@
 
     /* End hero carousel */
 
+    /* Section */
+    .wrap-section {
+        padding: 1.5rem 0;
+    }
+    /* End section */
+
+
     /* End index */
 
 }
@@ -29,6 +36,26 @@
 /* End tablet */
 
 /* Mobile */
-@media (max-width: 480px) {}
+@media (max-width: 480px) {
+
+    .container {
+        padding: 0 1rem;
+    }
+
+    /* Hero carousel */
+    .carousel-hero-desktop {
+        display: none !important;
+    }
+
+    .carousel-hero-mobile {
+        display: block !important;
+    }
+
+    .hero-carousel .carousel-item img {
+        aspect-ratio: 2 / 3;
+    }
+
+    /* End hero carousel */
+}
 
 /* End mobile*/

@@ -893,10 +893,8 @@ header {
     object-fit: cover;
 }
 
-@media (max-width: 767.98px) {
-    .hero-carousel .carousel-item img {
-        aspect-ratio: 4 / 3;
-    }
+.carousel-hero-mobile {
+    display: none !important;
 }
 
 /* Flechas: círculo negro, borde blanco, centradas sobre el borde de la imagen */
