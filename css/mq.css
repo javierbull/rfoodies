@@ -27,9 +27,15 @@
         padding: 1.5rem 0;
     }
 
+
     /* End section */
 
+    /* Benefit section */
+    .carousel-btn {
+        display: none;
+    }
 
+    /* End benefit section */
     /* End index */
 
 }
@@ -115,6 +121,10 @@
         width: 100%;
     }
     /* End MasterClass section */
+
+    .cta-section .btn {
+        width: 100%;
+    }
 }
 
 /* End mobile*/

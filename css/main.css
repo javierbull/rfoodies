@@ -808,8 +808,9 @@ body {
 
 /* Navbar */
 header {
-   height: 5.75rem;
+    height: 5.75rem;
 }
+
 .navbar-desktop {
     background-color: var(--bg-surface-primary);
     padding: 0 2rem;
@@ -1369,7 +1370,8 @@ header {
 /* End cards */
 
 /* Headers */
-.header-section, .header-section__dark {
+.header-section,
+.header-section__dark {
     /* background-color: pink; */
     margin-bottom: 1.5rem;
 }
@@ -1835,6 +1837,13 @@ header {
     padding: 2.5rem 0;
 }
 
+.cta-section {
+    /* background-color: pink; */
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
 .section-bg {
     background-color: var(--bg-surface-secondary);
 }
@@ -1858,6 +1867,7 @@ header {
     border-radius: 1.5rem;
     display: block;
 }
+
 /* End Section About */
 
 /* receta destacada */
@@ -1922,6 +1932,7 @@ header {
     object-fit: cover;
     border-radius: 1.5rem;
 }
+
 /* End receta destacada */
 
 /* MasterClass section */
@@ -1934,6 +1945,7 @@ header {
 .featured-masterClass__content {
     text-align: center;
 }
+
 /* End masterClass section */
 
 
