@@ -1865,7 +1865,6 @@ header {
 .featured-recipe__wrap-content {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    align-items: center;
     gap: 2rem;
 }
 
@@ -1922,13 +1921,6 @@ header {
     aspect-ratio: 4 / 3;
     object-fit: cover;
     border-radius: 1.5rem;
-}
-
-@media (max-width: 767.98px) {
-    .featured-recipe__wrap-content {
-        grid-template-columns: 1fr;
-        gap: 1.5rem;
-    }
 }
 /* End receta destacada */
 
