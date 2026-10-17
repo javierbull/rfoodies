@@ -57,6 +57,25 @@
     }
 
     /* End section */
+
+    /* Receta destacada */
+    .featured-recipe__wrap-content {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .featured-recipe__img {
+        order: -1;
+    }
+
+    /* End receta destacada */
+
+    /* MasterClass section */
+    .featured-masterClass__content {
+        text-align: left;
+    }
+
+    /* End MasterClass section */
 }
 
 /* End tablet vertical */
@@ -85,21 +104,17 @@
 
     /* Receta destacada */
 
-    .featured-recipe__wrap-content {
-        grid-template-columns: 1fr;
-        gap: 1.5rem;
-    }
-
-    .featured-recipe__img {
-        order: -1;
-    }
-
     /* Botón a todo el ancho */
     .featured-recipe__content .btn {
         width: 100%;
     }
-
     /* End receta destacada */
+
+    /* masterClass section */
+    .featured-masterClass__content .btn {
+        width: 100%;
+    }
+    /* End MasterClass section */
 }
 
 /* End mobile*/
