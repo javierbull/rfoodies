@@ -1134,18 +1134,9 @@ header {
 /* Siempre en una sola fila horizontal. Si no caben, se desliza hacia los lados */
 .testimonials__grid {
     display: grid;
-    /* todas las cards comparten el alto de la fila */
-    grid-auto-flow: column;
-    grid-auto-columns: 1fr;
-    align-items: stretch;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
     justify-content: safe center;
-    /* centrado si caben; si no, empieza desde la izquierda */
     gap: 1.25rem;
-    overflow-x: auto;
-    padding-bottom: 8px;
-    /* aire para la barra de scroll */
-    scroll-snap-type: x mandatory;
-    -webkit-overflow-scrolling: touch;
 }
 
 /* Vertical · Start/Start · Fixed width · Hug height · gap 12 · padding 24 */

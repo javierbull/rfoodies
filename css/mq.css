@@ -96,6 +96,18 @@
     }
 
     /* End premios mensuales  */
+
+    /* Prueba social */
+    .social-proof__grid {
+        gap: 0;
+        flex-direction: column;
+    }
+
+     .testimonials__grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* End prueba social */
 }
 
 /* End tablet vertical */
