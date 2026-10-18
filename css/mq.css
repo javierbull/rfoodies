@@ -82,6 +82,20 @@
     }
 
     /* End MasterClass section */
+
+    /* Premios mensuales */
+    .card-monthly-prizes {
+        padding: 1.5rem;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card-monthly-prizes img {
+        position: relative;
+        width: 50%;
+    }
+
+    /* End premios mensuales  */
 }
 
 /* End tablet vertical */
@@ -114,12 +128,14 @@
     .featured-recipe__content .btn {
         width: 100%;
     }
+
     /* End receta destacada */
 
     /* masterClass section */
     .featured-masterClass__content .btn {
         width: 100%;
     }
+
     /* End MasterClass section */
 
     .cta-section .btn {
