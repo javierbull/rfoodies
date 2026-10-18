@@ -22,6 +22,11 @@
 
     /* End hero carousel */
 
+    /* Anclas */
+    .wrap-section[id] {
+        scroll-margin-top: 4rem;
+    }
+
     /* Section */
     .wrap-section {
         padding: 1.5rem 0;
@@ -179,6 +184,26 @@
     .cta-section .btn {
         width: 100%;
     }
+
+    /* Bottom navigation */
+    .bottom-nav {
+        display: flex;
+    }
+
+    /* Evita que la barra fija tape el final del footer */
+    .site-footer {
+        padding-bottom: calc(var(--bottom-nav-h) + env(safe-area-inset-bottom, 0px));
+    }
+
+    /* End bottom navigation */
 }
 
 /* End mobile*/
+
+/* Móviles muy angostos */
+@media (max-width: 360px) {
+    .bottom-nav__item {
+        font-size: .875rem;
+    }
+}
+/* End móviles muy angostos */

@@ -861,6 +861,132 @@ body {
     display: none;
 }
 
+/* Bottom navigation (solo móvil, se activa en mq.css) */
+:root {
+    --bottom-nav-h: 4.25rem;
+}
+
+.wrap-section[id] {
+    scroll-margin-top: 5.75rem;
+    /* compensa el header fijo al navegar por anclas */
+}
+
+.bottom-nav {
+    display: none;
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 5;
+    height: calc(var(--bottom-nav-h) + env(safe-area-inset-bottom, 0px));
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+    background-color: var(--bg-surface-primary);
+    border-top: 1px solid var(--border-chakra-secondary);
+}
+
+.bottom-nav__item {
+    flex: 1 1 0;
+    min-width: 0;
+    height: var(--bottom-nav-h);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: .25rem;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    font: inherit;
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.25rem;
+    color: var(--text-primary);
+    text-decoration: none;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.bottom-nav__icon {
+    font-size: 1.75rem;
+}
+
+.bottom-nav__icon--filled {
+    display: none;
+}
+
+.bottom-nav__item.active {
+    color: var(--text-brand);
+}
+
+.bottom-nav__item.active .bottom-nav__icon--outline {
+    display: none;
+}
+
+.bottom-nav__item.active .bottom-nav__icon--filled {
+    display: block;
+}
+
+.bottom-nav__item:focus-visible {
+    outline: 2px solid var(--border-focus);
+    outline-offset: -4px;
+    border-radius: 1rem;
+}
+
+/* Hoja "Más" */
+.more-menu {
+    height: auto;
+    max-height: 80vh;
+    background-color: var(--bg-surface-primary);
+    border-top-left-radius: 1.5rem;
+    border-top-right-radius: 1.5rem;
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+}
+
+.more-menu__header {
+    padding: 1rem 1.5rem .5rem;
+}
+
+.more-menu__body {
+    padding: 0 .5rem .75rem;
+}
+
+.more-menu__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.more-menu__link {
+    display: flex;
+    align-items: center;
+    gap: .75rem;
+    padding: .875rem 1rem;
+    border-radius: 1rem;
+    color: var(--text-primary);
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.more-menu__link ion-icon {
+    font-size: 1.5rem;
+}
+
+.more-menu__link span {
+    flex: 1;
+}
+
+.more-menu__link ion-icon:last-child {
+    font-size: 1.25rem;
+    color: var(--text-muted);
+}
+
+.more-menu__link:hover,
+.more-menu__link:active {
+    background-color: var(--bg-fill-secondary);
+    color: var(--text-link-hover);
+}
+
+/* End bottom navigation */
+
 /* End Navbar */
 
 /* Carousel hero */

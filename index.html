@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <meta name="referrer" content="strict-origin-when-cross-origin">
     <title>Inicio</title>
     <link rel="icon" href="images/logos/favicon.svg" type="image/x-icon" />
@@ -125,7 +125,7 @@
     </header>
     <main>
         <!-- Hero carousel-->
-        <div class="wrap-section">
+        <div id="index" class="wrap-section">
             <div class="container">
                 <section class="hero-carousel-wrap">
                     <div id="heroCarousel" class="carousel slide hero-carousel" data-bs-ride="carousel"
@@ -218,7 +218,7 @@
         </div>
         <!-- End section about -->
         <!-- Section featured recipe  -->
-        <div class="wrap-section">
+        <div id="recetas" class="wrap-section">
             <div class="container">
                 <section class="featured-recipe">
                     <div class="header-section text-center">
@@ -265,7 +265,7 @@
         <!-- End section featured recipe -->
 
         <!-- MasterClass section -->
-        <div class="wrap-section section-bg">
+        <div id="masterclasses" class="wrap-section section-bg">
             <div class="container">
                 <section class="featured-masterClass">
                     <div class="header-section text-center">
@@ -306,7 +306,7 @@
         <!-- End MasterClass section -->
 
         <!-- Benefit section -->
-        <div class="wrap-section">
+        <div id="beneficios" class="wrap-section">
             <div class="container">
                 <div class="header-section text-center">
                     <h6 class="header-section__subtitle">
@@ -414,7 +414,7 @@
         <!-- End Benefit section -->
 
         <!-- section 5 de la semana-->
-        <div class="wrap-section section-bg">
+        <div id="los-5-de-la-semana" class="wrap-section section-bg">
             <div class="container">
                 <div class="header-section text-center">
                     <h6 class="header-section__subtitle">
@@ -527,7 +527,7 @@
         <!-- End section 5 de la semana-->
 
         <!--section premios mensuales -->
-        <div class="wrap-section">
+        <div id="sorteos" class="wrap-section">
             <div class="container">
                 <div class="header-section text-center">
                     <h6 class="header-section__subtitle">
@@ -843,7 +843,7 @@
         <!-- End section ganadores-->
 
         <!--section planes -->
-        <div class="wrap-section section-dark">
+        <div id="planes" class="wrap-section section-dark">
             <div class="container">
                 <div class="header-section__dark text-center">
                     <h6 class="header-section__subtitle">
@@ -976,6 +976,72 @@
         </div>
 
     </footer>
+
+    <!-- Bottom navigation (solo móvil) -->
+    <nav class="bottom-nav" aria-label="Navegación principal">
+        <a class="bottom-nav__item active" href="index.html" data-nav-item="inicio" aria-current="page">
+            <ion-icon class="bottom-nav__icon bottom-nav__icon--outline" name="home-outline" aria-hidden="true"></ion-icon>
+            <ion-icon class="bottom-nav__icon bottom-nav__icon--filled" name="home" aria-hidden="true"></ion-icon>
+            <span class="bottom-nav__label">Inicio</span>
+        </a>
+        <a class="bottom-nav__item" href="beneficios.html" data-nav-item="beneficios">
+            <ion-icon class="bottom-nav__icon bottom-nav__icon--outline" name="ticket-outline" aria-hidden="true"></ion-icon>
+            <ion-icon class="bottom-nav__icon bottom-nav__icon--filled" name="ticket" aria-hidden="true"></ion-icon>
+            <span class="bottom-nav__label">Beneficios</span>
+        </a>
+        <a class="bottom-nav__item" href="sorteos.html" data-nav-item="sorteos">
+            <ion-icon class="bottom-nav__icon bottom-nav__icon--outline" name="gift-outline" aria-hidden="true"></ion-icon>
+            <ion-icon class="bottom-nav__icon bottom-nav__icon--filled" name="gift" aria-hidden="true"></ion-icon>
+            <span class="bottom-nav__label">Sorteos</span>
+        </a>
+        <button type="button" class="bottom-nav__item" data-nav-item="mas" data-bs-toggle="offcanvas"
+            data-bs-target="#moreMenu" aria-controls="moreMenu">
+            <ion-icon class="bottom-nav__icon bottom-nav__icon--outline" name="menu-outline" aria-hidden="true"></ion-icon>
+            <ion-icon class="bottom-nav__icon bottom-nav__icon--filled" name="menu" aria-hidden="true"></ion-icon>
+            <span class="bottom-nav__label">Más</span>
+        </button>
+    </nav>
+
+    <!-- Menú "Más" (hoja inferior) -->
+    <div class="offcanvas offcanvas-bottom more-menu" tabindex="-1" id="moreMenu" aria-labelledby="moreMenuTitle">
+        <div class="offcanvas-header more-menu__header">
+            <h5 class="offcanvas-title headline_5" id="moreMenuTitle">Explorar</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Cerrar"></button>
+        </div>
+        <div class="offcanvas-body more-menu__body">
+            <ul class="more-menu__list">
+                <li>
+                    <a class="more-menu__link" href="recetas.html">
+                        <ion-icon name="restaurant-outline"></ion-icon>
+                        <span>Recetas</span>
+                        <ion-icon name="chevron-forward-outline"></ion-icon>
+                    </a>
+                </li>
+                <li>
+                    <a class="more-menu__link" href="masterclasses.html">
+                        <ion-icon name="videocam-outline"></ion-icon>
+                        <span>MasterClasses</span>
+                        <ion-icon name="chevron-forward-outline"></ion-icon>
+                    </a>
+                </li>
+                <li>
+                    <a class="more-menu__link" href="los-5-de-la-semana.html">
+                        <ion-icon name="star-outline"></ion-icon>
+                        <span>Los 5 de la semana</span>
+                        <ion-icon name="chevron-forward-outline"></ion-icon>
+                    </a>
+                </li>
+                <li>
+                    <a class="more-menu__link" href="planes.html">
+                        <ion-icon name="card-outline"></ion-icon>
+                        <span>Planes</span>
+                        <ion-icon name="chevron-forward-outline"></ion-icon>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- End bottom navigation -->
 
     <!-- Js-files -->
     <script type="module" src="https://unpkg.com/ionicons@8.0.13/dist/ionicons/ionicons.esm.js"></script>
