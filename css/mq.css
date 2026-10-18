@@ -122,8 +122,18 @@
         scroll-snap-type: none;
         padding-bottom: 0;
     }
-
     /* End section planes */
+
+    /* Footer */
+    .site-footer__main {
+        grid-auto-flow: row; 
+        grid-auto-columns: auto;
+        grid-template-columns: 1fr;   /* una sola columna */
+        justify-content: stretch;
+        padding-top: 1.5rem !important;
+        padding-bottom: 1.5rem !important;
+    }
+    /* End footer */
 }
 
 /* End tablet vertical */
