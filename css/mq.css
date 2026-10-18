@@ -2,7 +2,7 @@
 @media (max-width: 1200px) {
 
     /* Index */
-    header {
+    .main-header {
         height: 4rem;
     }
 
@@ -103,11 +103,27 @@
         flex-direction: column;
     }
 
-     .testimonials__grid {
+    .testimonials__grid {
         grid-template-columns: 1fr;
     }
 
     /* End prueba social */
+
+    /* Section Planes */
+    .plans__grid {
+        grid-auto-flow: row;
+        /* los elementos se apilan */
+        grid-auto-columns: auto;
+        grid-template-columns: 1fr;
+        /* una sola columna */
+        justify-content: stretch;
+        overflow-x: visible;
+        /* ya no hace falta scroll horizontal */
+        scroll-snap-type: none;
+        padding-bottom: 0;
+    }
+
+    /* End section planes */
 }
 
 /* End tablet vertical */
