@@ -149,6 +149,8 @@
     --shadow-primary: 0px 4px 4px rgba(0, 0, 0, 0.15);
     ;
     /* End shadows */
+
+    --bottom-nav-h: 4.25rem;
 }
 
 html {
@@ -862,10 +864,6 @@ body {
 }
 
 /* Bottom navigation (solo móvil, se activa en mq.css) */
-:root {
-    --bottom-nav-h: 4.25rem;
-}
-
 .wrap-section[id] {
     scroll-margin-top: 5.75rem;
     /* compensa el header fijo al navegar por anclas */
