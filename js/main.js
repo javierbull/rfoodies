@@ -119,4 +119,58 @@ $(document).ready(function () {
         });
     });
     // End video receta destacada
+
+    // Página de recetas: filtro por categoría + buscador
+    const $recetasGrid = $('#recipesGrid');
+
+    if ($recetasGrid.length) {
+        const $tarjetas = $recetasGrid.children('.recipe-card');
+        const $chips = $('.recipe-filters .chip');
+        const $input = $('#recipeSearchInput');
+        const $vacio = $('#recipesEmpty');
+        let categoriaActiva = 'todas';
+
+        // Ignora mayúsculas y tildes ("pasta" encuentra "Pásta")
+        function normalizar(texto) {
+            return (texto || '').normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase().trim();
+        }
+
+        function filtrarRecetas() {
+            const termino = normalizar($input.val());
+            let visibles = 0;
+
+            $tarjetas.each(function () {
+                const $tarjeta = $(this);
+                const categorias = ($tarjeta.data('categories') || '').toString().split(' ');
+                const titulo = normalizar($tarjeta.find('.card-title').text());
+
+                const coincideCategoria = categoriaActiva === 'todas' || categorias.includes(categoriaActiva);
+                const coincideTexto = !termino || titulo.includes(termino);
+                const mostrar = coincideCategoria && coincideTexto;
+
+                $tarjeta.prop('hidden', !mostrar);
+                if (mostrar) visibles++;
+            });
+
+            $vacio.prop('hidden', visibles > 0);
+        }
+
+        $chips.on('click', function () {
+            const $chip = $(this);
+            categoriaActiva = $chip.data('category');
+
+            $chips.removeClass('active').attr('aria-pressed', 'false');
+            $chip.addClass('active').attr('aria-pressed', 'true');
+
+            filtrarRecetas();
+        });
+
+        $input.on('input', filtrarRecetas);
+
+        $('#recipeSearch').on('submit', function (e) {
+            e.preventDefault();
+            filtrarRecetas();
+        });
+    }
+    // End página de recetas
 });

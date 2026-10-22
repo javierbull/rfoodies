@@ -1127,6 +1127,49 @@ body {
     object-fit: cover;
 }
 
+/* Contenedor que recorta la imagen al hacer zoom (hover) */
+.card-product__media,
+.recipe-card__media {
+    overflow: hidden;
+    border-radius: 1rem;
+    margin-bottom: .75rem;
+}
+
+.card-product__media .card-img-top {
+    display: block;
+    width: 100%;
+    margin-bottom: 0;
+}
+
+.card-product .card-img-top,
+.card-winners img {
+    transition: transform .4s ease;
+    will-change: transform;
+}
+
+@media (hover: hover) {
+
+    .card-product:hover .card-img-top,
+    .card-product:focus-within .card-img-top,
+    .card-winners:hover img {
+        transform: scale(1.08);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+    .card-product .card-img-top,
+    .card-winners img {
+        transition: none;
+    }
+
+    .card-product:hover .card-img-top,
+    .card-product:focus-within .card-img-top,
+    .card-winners:hover img {
+        transform: none;
+    }
+}
+
 .card-product .card-body {
     padding: 0;
 }
@@ -1974,9 +2017,16 @@ body {
 .about__photo {
     width: 25rem;
     height: 25rem;
-    object-fit: cover;
     border-radius: 1.5rem;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.about__photo img {
     display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 /* End Section About */
@@ -2036,12 +2086,45 @@ body {
 }
 
 .featured-recipe__img {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    border-radius: 1.5rem;
+    overflow: hidden;
+}
+
+.featured-recipe__img img {
     display: block;
     width: 100%;
-    height: auto;
-    aspect-ratio: 4 / 3;
+    height: 100%;
     object-fit: cover;
-    border-radius: 1.5rem;
+}
+
+/* Zoom al hacer hover (imagen recortada por su contenedor) */
+.about__photo img,
+.featured-recipe__img img {
+    transition: transform .4s ease;
+    will-change: transform;
+}
+
+@media (hover: hover) {
+
+    .about__photo:hover img,
+    .featured-recipe__img:hover img {
+        transform: scale(1.08);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+    .about__photo img,
+    .featured-recipe__img img {
+        transition: none;
+    }
+
+    .about__photo:hover img,
+    .featured-recipe__img:hover img {
+        transform: none;
+    }
 }
 
 /* End receta destacada */
@@ -2061,3 +2144,220 @@ body {
 
 
 /* END INDEX PAGE */
+
+/* RECETAS PAGE */
+
+.recipes-page__header {
+    margin-bottom: 1.5rem;
+}
+
+.recipes-page__title {
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 2.5rem;
+    margin-bottom: .75rem;
+}
+
+.recipes-page__intro {
+    max-width: 62rem;
+    margin: 0;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    color: var(--text-secondary);
+}
+
+/* Buscador */
+.recipe-search {
+    display: flex;
+    height: 3rem;
+    margin-bottom: 1.5rem;
+    background: var(--bg-surface-secondary);
+    border: 1px solid var(--border-secondary);
+    border-radius: 2rem;
+    overflow: hidden;
+}
+
+.recipe-search:focus-within {
+    outline: 2px solid var(--border-focus);
+    outline-offset: 2px;
+}
+
+.recipe-search__input {
+    flex: 1 1 auto;
+    min-width: 0;
+    padding: 0 1.5rem;
+    border: 0;
+    outline: 0;
+    background: transparent;
+    font: inherit;
+    font-size: 1rem;
+    color: var(--text-primary);
+}
+
+.recipe-search__input::placeholder {
+    color: var(--text-placeholder);
+}
+
+/* Quita la "x" nativa de los input type=search */
+.recipe-search__input::-webkit-search-cancel-button {
+    -webkit-appearance: none;
+}
+
+.recipe-search__btn {
+    flex: 0 0 auto;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: .5rem;
+    padding: 0 1.25rem;
+    border: 0;
+    background: var(--bg-fill-brand);
+    color: var(--text-on-primary);
+    font: inherit;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: background-color .2s ease;
+}
+
+.recipe-search__btn ion-icon {
+    font-size: 1.25rem;
+}
+
+.recipe-search__btn:hover {
+    background: var(--bg-fill-brand-hover);
+}
+
+.recipe-search__btn:focus-visible {
+    outline: 2px solid var(--border-focus);
+    outline-offset: -4px;
+}
+
+/* Chips de categorías (una fila con scroll horizontal) */
+.recipe-filters {
+    display: flex;
+    gap: .75rem;
+    margin-bottom: 1.5rem;
+    padding: 4px;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+.chip {
+    flex: 0 0 auto;
+    height: 2.25rem;
+    padding: 0 1rem;
+    border: 1px solid var(--border-secondary);
+    border-radius: 2rem;
+    background: transparent;
+    font: inherit;
+    font-size: .875rem;
+    font-weight: 600;
+    line-height: 1;
+    white-space: nowrap;
+    color: var(--text-primary);
+    transition: background-color .2s ease, color .2s ease, border-color .2s ease;
+}
+
+.chip:hover {
+    background: var(--bg-fill-secondary);
+}
+
+.chip:focus-visible {
+    outline: 2px solid var(--border-focus);
+    outline-offset: 2px;
+}
+
+.chip.active,
+.chip.active:hover {
+    background: var(--bg-fill-brand);
+    border-color: var(--border-brand);
+    color: var(--text-on-primary);
+}
+
+/* Listado */
+.recipes-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.5rem;
+}
+
+.recipes-grid [hidden],
+.recipes-empty[hidden] {
+    display: none !important;
+}
+
+.recipe-card {
+    display: block;
+    max-width: none;
+    color: var(--text-primary);
+    text-decoration: none;
+}
+
+.recipe-card__media {
+    position: relative;
+    margin-bottom: .75rem;
+}
+
+.recipe-card .card-img-top {
+    display: block;
+    width: 100%;
+    aspect-ratio: 11 / 9;
+    object-fit: cover;
+    margin-bottom: 0;
+}
+
+/* Badge de tiempo de cocción (esquina inferior izquierda de la imagen) */
+.badge-time {
+    position: absolute;
+    left: .5rem;
+    bottom: .5rem;
+    display: inline-flex;
+    align-items: center;
+    gap: .5rem;
+    padding: .375rem .75rem;
+    border-radius: .5rem;
+    background: rgba(41, 41, 41, .8);
+    color: var(--text-on-primary);
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.25rem;
+    -webkit-backdrop-filter: blur(4px);
+    backdrop-filter: blur(4px);
+}
+
+.badge-time ion-icon {
+    font-size: 1.25rem;
+}
+
+.recipe-card .card-title {
+    display: block;
+    margin: 0;
+    font-size: 1.25rem;
+    font-weight: 600;
+    line-height: 1.5rem;
+    transition: color .2s ease;
+}
+
+.recipe-card:hover .card-title,
+.recipe-card:focus-visible .card-title {
+    color: var(--text-brand);
+}
+
+.recipe-card:focus-visible {
+    outline: 2px solid var(--border-focus);
+    outline-offset: 4px;
+    border-radius: 1rem;
+}
+
+.recipes-empty {
+    margin: 2rem 0;
+    text-align: center;
+    color: var(--text-secondary);
+}
+
+/* Link activo en el menú "Más" */
+.more-menu__link[aria-current="page"] {
+    color: var(--text-brand);
+}
+
+/* END RECETAS PAGE */

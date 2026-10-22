@@ -50,6 +50,13 @@
 /* Tablet vertical */
 @media (max-width: 1040px) {
 
+    /* Recetas */
+    .recipes-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    /* End recetas */
+
     /* Section About */
     .about {
         display: flex;
@@ -164,6 +171,26 @@
     .container {
         padding: 0 1rem;
     }
+
+    /* Recetas */
+    .recipes-page__title {
+        font-size: 1.75rem;
+        line-height: 2.25rem;
+    }
+
+    .recipes-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .recipe-search__btn {
+        padding: 0 1rem;
+    }
+
+    .recipe-search__input {
+        padding: 0 1rem;
+    }
+
+    /* End recetas */
 
     /* Hero carousel */
     .carousel-hero-desktop {
