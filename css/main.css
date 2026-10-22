@@ -1115,9 +1115,27 @@ body {
 
 /* Cards */
 .card-product {
+    display: block;
     border-radius: 0;
     max-width: 22.5rem;
     position: relative;
+    color: var(--text-primary);
+    text-decoration: none;
+}
+
+.card-product .card-title {
+    transition: color .2s ease;
+}
+
+.card-product:hover .card-title,
+.card-product:focus-visible .card-title {
+    color: var(--text-brand);
+}
+
+.card-product:focus-visible {
+    outline: 2px solid var(--border-focus);
+    outline-offset: 4px;
+    border-radius: 1rem;
 }
 
 .card-product .card-img-top {
